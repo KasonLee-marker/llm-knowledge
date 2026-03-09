@@ -8,10 +8,10 @@ LLM Agent 的标准架构由以下四大核心组件构成：
 flowchart TD
     A["用户输入 / 环境状态"] --> B["1. 感知层<br/>Perception"]
     B --> C["2. 推理核心<br/>Reasoning / Planning"]
-    M["4. 记忆层<br/>Memory"] <--> C
-    C --> D["3. 行动层<br/>Action / Tool Call"]
-    D --> E["外部工具执行 / 环境反馈"]
-    E --> B
+    D["4. 记忆层<br/>Memory"] <--> C
+    C --> E["3. 行动层<br/>Action / Tool Call"]
+    E --> F["外部工具执行 / 环境反馈"]
+    F --> B
 ```
 
 ## 四大核心组件详解
