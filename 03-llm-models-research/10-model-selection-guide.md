@@ -172,16 +172,18 @@ public class ModelRouter {
 
 | 优先级 | 最优选 | 次优选 | 预算受限 |
 |--------|--------|--------|---------|
-| 综合能力最强 | GPT-4o | Claude 3.5 Sonnet | GPT-4o mini |
-| 推理/数学最强 | o1/DeepSeek-R1 | o3-mini | DeepSeek-R1 Distill |
-| 代码最强 | Claude 3.5 Sonnet | GPT-4o | Qwen2.5-Coder-32B |
-| 成本最低 | DeepSeek-V3 | Gemini 2.0 Flash | GLM-4-Flash |
-| 长上下文 | Gemini 1.5 Pro | Claude 3.5 | Gemini 2.0 Flash |
-| 中文最强 | DeepSeek-V3 | Qwen2.5-Max | GLM-4-Air |
-| 私有部署 | DeepSeek-V3 自托管 | Qwen2.5-72B | LLaMA 3.3-70B |
-| 安全合规 | Claude 3 Opus | GPT-4o（Azure）| Qwen 自托管 |
-| 速度最快 | Groq+LLaMA 3.3 | Gemini Flash | GPT-4o mini |
-| 小型本地 | Phi-4 14B | Mistral Small 3 | Qwen2.5-7B |
+| 综合能力最强 | GPT-4.1 / Gemini 2.5 Pro | Claude 3.7 Sonnet | GPT-4.1 mini |
+| 推理/数学最强 | o4-mini / DeepSeek-R1 | o3 / Gemini 2.5 Pro | Kimi k1.5 |
+| 代码最强 | Claude 3.7 Sonnet | GPT-4.1 | Qwen2.5-Coder-32B |
+| 成本最低（国内）| doubao-1.5-pro (¥0.4/百万) | GLM-Z1-Flash (免费) | GLM-4-Flash (免费) |
+| 成本最低（国际）| GPT-4.1 nano ($0.1/百万) | Gemini 2.0 Flash-Lite | Mistral Small 3.1 |
+| 长上下文 | LLaMA 4 Scout（10M）| Gemini 2.5 Pro（1M）| GPT-4.1（1M）|
+| 中文最强 | DeepSeek-V3 / Qwen3 | Kimi k2 | GLM-Z1 |
+| 私有部署 | DeepSeek-V3 自托管 | Qwen3-235B | LLaMA 4 Maverick |
+| 安全合规 | Claude 3.7 Sonnet | GPT-4.1（Azure）| Qwen 自托管 |
+| 速度最快 | Groq+LLaMA 3.3 | Gemini 2.0 Flash | Doubao-1.5-pro |
+| 小型本地 | Qwen3-8B / Phi-4 | Gemma 3 12B | Mistral Small 3.1 |
+| 推理+低价 | GLM-Z1-Air (¥2/百万) | DeepSeek-R1 (¥4/百万) | QwQ-32B（开源）|
 
 ---
 

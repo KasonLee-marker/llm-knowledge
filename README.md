@@ -47,21 +47,22 @@
 ## 03 - LLM 模型研究
 
 > 模块入口：[03-llm-models-research.md](./03-llm-models-research.md)
+> 数据更新至 **2025 年底**，价格单位为 ¥/百万 token
 
 | # | 文档 | 简介 |
 |---|------|------|
-| 1 | [LLM 市场全景概览](./03-llm-models-research/01-llm-landscape-overview.md) | 全局分类、市场格局、主流模型一览与选型维度 |
-| 2 | [OpenAI GPT 系列](./03-llm-models-research/02-openai-gpt-series.md) | GPT-4o、GPT-4o mini、o1、o3-mini 详细调研与对比 |
-| 3 | [Anthropic Claude 系列](./03-llm-models-research/03-anthropic-claude.md) | Claude 3/3.5/3.7 系列特性、安全机制与集成指南 |
-| 4 | [Google Gemini 系列](./03-llm-models-research/04-google-gemini.md) | Gemini 2.0 Flash、1.5 Pro、Gemma 开源模型 |
-| 5 | [Meta LLaMA 系列](./03-llm-models-research/05-meta-llama.md) | LLaMA 3.1/3.2/3.3 规格、部署与微调指南 |
-| 6 | [阿里通义千问（Qwen）](./03-llm-models-research/06-alibaba-qwen.md) | Qwen2.5 全系列、代码/数学专项、中文优势 |
-| 7 | [DeepSeek 系列](./03-llm-models-research/07-deepseek.md) | DeepSeek-V3、R1 技术突破、超低成本分析 |
-| 8 | [其他主要模型](./03-llm-models-research/08-other-major-models.md) | Mistral、Phi、ERNIE、混元、ChatGLM、Yi、InternLM 等 |
-| 9 | [全面模型对比表格](./03-llm-models-research/09-model-comparison.md) | 多维度横向对比：性能、成本、延迟、上下文、合规 |
+| 1 | [LLM 市场全景概览](./03-llm-models-research/01-llm-landscape-overview.md) | 2025年全局模型分类、市场格局、¥/百万定价速查 |
+| 2 | [OpenAI GPT 系列](./03-llm-models-research/02-openai-gpt-series.md) | GPT-4.1/mini/nano、o3、o4-mini、o1 详细对比 |
+| 3 | [Anthropic Claude 系列](./03-llm-models-research/03-anthropic-claude.md) | Claude 3.7 Extended Thinking、3.5 系列 |
+| 4 | [Google Gemini 系列](./03-llm-models-research/04-google-gemini.md) | Gemini 2.5 Pro/Flash、Gemma 3（MIT）|
+| 5 | [Meta LLaMA 系列](./03-llm-models-research/05-meta-llama.md) | LLaMA 4 Scout（10M上下文）/ Maverick 与 3.x |
+| 6 | [阿里通义千问（Qwen）](./03-llm-models-research/06-alibaba-qwen.md) | Qwen3 双模式 MoE、QwQ-32B 推理开源 |
+| 7 | [DeepSeek 系列](./03-llm-models-research/07-deepseek.md) | V3-0324 更新、R1 蒸馏、精确成本定价 |
+| 8 | [其他主要模型](./03-llm-models-research/08-other-major-models.md) | **Kimi k2**、**Doubao**、**GLM-Z1**、Grok-3、Hunyuan-T1、Mistral Small 3.1、ERNIE 4.5 |
+| 9 | [全面模型对比表格](./03-llm-models-research/09-model-comparison.md) | **¥/百万token 完整定价表**，30+ 模型横向对比 |
 | 10 | [模型选型指南](./03-llm-models-research/10-model-selection-guide.md) | 场景化决策树、Java 集成策略与成本控制 |
 | 11 | [微调候选模型](./03-llm-models-research/11-fine-tuning-candidates.md) | 微调方法对比、候选模型推荐、工具链指南 |
-| 12 | [模型发展趋势](./03-llm-models-research/12-model-trends.md) | 推理革命、MoE 架构、多模态演进与市场预测 |
+| 12 | [模型发展趋势](./03-llm-models-research/12-model-trends.md) | 推理革命、价格战、MoE 普及与市场预测 |
 
 ---
 
