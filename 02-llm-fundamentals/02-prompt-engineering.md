@@ -14,10 +14,10 @@ Prompt（提示词）是输入给 LLM 的文本指令，是人类与大语言模
 
 ```mermaid
 flowchart TB
-    SP["① System Prompt（系统提示）\n   · 角色定义\n   · 行为规范与约束\n   · 输出格式要求"]
-    FS["② Few-shot 示例（可选）\n   · 输入示例 1 → 期望输出 1\n   · 输入示例 2 → 期望输出 2"]
-    CTX["③ Context / Background（上下文信息，可选）\n   · RAG 检索结果\n   · 用户画像 / 对话历史摘要"]
-    UI["④ User Input（当前用户输入）\n   · 当前轮次的用户消息"]
+    SP["① System Prompt（系统提示）<br/>· 角色定义<br/>· 行为规范与约束<br/>· 输出格式要求"]
+    FS["② Few-shot 示例（可选）<br/>· 输入示例 1 → 期望输出 1<br/>· 输入示例 2 → 期望输出 2"]
+    CTX["③ Context / Background（上下文信息，可选）<br/>· RAG 检索结果<br/>· 用户画像 / 对话历史摘要"]
+    UI["④ User Input（当前用户输入）<br/>· 当前轮次的用户消息"]
 
     SP --> FS --> CTX --> UI
 

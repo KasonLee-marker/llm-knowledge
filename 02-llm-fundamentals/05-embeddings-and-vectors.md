@@ -91,15 +91,15 @@ RAG 是 Embedding 最重要的应用场景，解决了 LLM 的"知识截止"和"
 flowchart TB
     subgraph offline["🗄️ 知识库构建（离线 / 预处理）"]
         direction LR
-        D1["原始文档"] --> D2["分块\n（Chunking）"] --> D3["生成\nEmbedding"] --> D4["存入\n向量数据库（Vector DB）"]
+        D1["原始文档"] --> D2["分块<br/>（Chunking）"] --> D3["生成<br/>Embedding"] --> D4["存入<br/>向量数据库（Vector DB）"]
     end
 
     Q["用户提问"] --> QE["生成 Query Embedding"]
-    QE --> RET["在 Vector DB 中\n检索相似文档（Top-K）"]
+    QE --> RET["在 Vector DB 中<br/>检索相似文档（Top-K）"]
     D4 -. "索引查询" .-> RET
-    RET --> AUG["将检索结果拼接进 Prompt\n（Augmentation）"]
-    AUG --> GEN["LLM 基于检索到的知识\n生成答案（Generation）"]
-    GEN --> ANS["返回最终回答\n（附带来源引用）"]
+    RET --> AUG["将检索结果拼接进 Prompt<br/>（Augmentation）"]
+    AUG --> GEN["LLM 基于检索到的知识<br/>生成答案（Generation）"]
+    GEN --> ANS["返回最终回答<br/>（附带来源引用）"]
 
     style offline fill:#f1f5f9,stroke:#94a3b8
     style Q   fill:#dbeafe,stroke:#3b82f6,color:#1e3a5f

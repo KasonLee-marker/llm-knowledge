@@ -46,19 +46,22 @@ Context 窗口（也称为 **上下文长度** 或 **Context Length**）是 LLM 
 
 ### Context 窗口的组成
 
-```
-┌─────────────────────────────────────────────────────┐
-│                   Context 窗口（128K tokens）         │
-│                                                      │
-│  ┌──────────────┐  ┌──────────────┐  ┌───────────┐  │
-│  │ System Prompt │  │  对话历史     │  │ 当前输入   │  │
-│  │ (~500 tokens) │  │ (变长)        │  │ (变长)    │  │
-│  └──────────────┘  └──────────────┘  └───────────┘  │
-│                                      ┌───────────┐  │
-│                                      │ 模型输出   │  │
-│                                      │ (变长)    │  │
-│                                      └───────────┘  │
-└─────────────────────────────────────────────────────┘
+```mermaid
+flowchart LR
+    subgraph CW["Context 窗口（128K tokens，输入与输出共享）"]
+        direction LR
+        SP["System Prompt<br/>（~500 tokens）"]
+        HIS["对话历史<br/>（变长）"]
+        CUR["当前用户输入<br/>（变长）"]
+        OUT["模型输出<br/>（变长）"]
+        SP --- HIS --- CUR --- OUT
+    end
+
+    style SP  fill:#dbeafe,stroke:#3b82f6,color:#1e3a5f
+    style HIS fill:#dcfce7,stroke:#22c55e,color:#14532d
+    style CUR fill:#fef9c3,stroke:#eab308,color:#713f12
+    style OUT fill:#fce7f3,stroke:#ec4899,color:#831843
+    style CW  fill:#f8fafc,stroke:#64748b
 ```
 
 > **注意**：Context 窗口的输入和输出**共享**总长度限制。如果 System Prompt 和对话历史过长，可用于输出的空间就会减少。
