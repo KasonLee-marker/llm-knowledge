@@ -9,6 +9,7 @@
 3. [LLM 驱动的 Agent（ReAct、规划等）](./01-agent-basics/03-llm-agents.md)
 4. [Agent 工具（Tools / Function Calling）](./01-agent-basics/04-agent-tools.md)
 5. [Agent 记忆（Memory）](./01-agent-basics/05-agent-memory.md)
+6. [意图识别（Intent Recognition）](./01-agent-basics/06-intent-recognition.md)
 
 ## 核心概念速览
 
@@ -20,6 +21,7 @@
 | 记忆（Memory）| Agent 存储和检索上下文信息的机制 |
 | 规划（Planning）| Agent 将复杂目标分解为可执行步骤的能力 |
 | ReAct | Reasoning + Acting：交替推理与行动的经典 Agent 模式 |
+| 意图识别（Intent Recognition）| 从用户自然语言输入中自动识别其意图的技术 |
 
 ## 示例代码
 
