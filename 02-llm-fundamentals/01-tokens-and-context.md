@@ -47,7 +47,7 @@ Context 窗口（也称为 **上下文长度** 或 **Context Length**）是 LLM 
 ### Context 窗口的组成
 
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph CW["Context 窗口（128K tokens，输入与输出共享）"]
         direction LR
         SP["System Prompt<br/>（~500 tokens）"]
