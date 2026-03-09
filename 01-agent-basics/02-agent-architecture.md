@@ -6,7 +6,7 @@ LLM Agent 的标准架构由以下四大核心组件构成：
 
 ```mermaid
 flowchart TD
-    Input["用户输入 / 环境状态"] --> Perception["1. 感知层<br/>Perception"]
+    Input["用户 / 环境输入"] --> Perception["1. 感知层<br/>Perception"]
     Perception --> Reasoning["2. 推理核心<br/>Reasoning / Planning"]
     Memory["4. 记忆层<br/>Memory"] <--> Reasoning
     Reasoning --> Action["3. 行动层<br/>Action / Tool Call"]
