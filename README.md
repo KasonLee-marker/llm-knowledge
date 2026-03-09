@@ -48,45 +48,20 @@
 
 > 模块入口：[03-llm-models-research.md](./03-llm-models-research.md)
 
-### 商业模型
-
-| 文档 | 说明 |
-|------|------|
-| [OpenAI GPT 系列](./03-llm-models-research/commercial-models/openai-gpt-series.md) | GPT-4o、GPT-4 等系列对比 |
-| [Anthropic Claude](./03-llm-models-research/commercial-models/anthropic-claude.md) | Claude 3 系列特性 |
-| [Google Gemini](./03-llm-models-research/commercial-models/google-gemini.md) | Gemini 1.5 Pro/Flash 等 |
-| [Meta LLaMA](./03-llm-models-research/commercial-models/meta-llama.md) | LLaMA 3 系列 |
-| [阿里 Qwen](./03-llm-models-research/commercial-models/alibaba-qwen.md) | Qwen 系列 |
-| [百度文心](./03-llm-models-research/commercial-models/baidu-ernie.md) | ERNIE 系列 |
-| [腾讯混元](./03-llm-models-research/commercial-models/tencent-models.md) | 混元系列 |
-| [Microsoft Phi](./03-llm-models-research/commercial-models/microsoft-phi.md) | Phi 小模型系列 |
-
-### 开源模型
-
-| 文档 | 说明 |
-|------|------|
-| [DeepSeek](./03-llm-models-research/open-source-models/deepseek.md) | DeepSeek 系列 |
-| [ChatGLM](./03-llm-models-research/open-source-models/chatglm.md) | 清华 GLM 系列 |
-| [Mistral 系列](./03-llm-models-research/open-source-models/mistral-series.md) | Mistral、Mixtral |
-| [Yi 系列](./03-llm-models-research/open-source-models/yi-models.md) | 零一万物 Yi 模型 |
-| [InternLM](./03-llm-models-research/open-source-models/intern-llm.md) | 书生浦语系列 |
-
-### 模型对比
-
-| 文档 | 说明 |
-|------|------|
-| [能力矩阵](./03-llm-models-research/model-comparison/capability-matrix.md) | 多维度能力对比 |
-| [Context 窗口分析](./03-llm-models-research/model-comparison/context-window-analysis.md) | 各模型上下文长度 |
-| [成本性能比](./03-llm-models-research/model-comparison/cost-performance.md) | 价格与性能综合评估 |
-| [延迟对比](./03-llm-models-research/model-comparison/latency-comparison.md) | TTFT 与吞吐量对比 |
-
-### 其他
-
-| 文档 | 说明 |
-|------|------|
-| [模型选型指南](./03-llm-models-research/model-selection-guide.md) | 场景化选型决策树 |
-| [Fine-tuning 候选模型](./03-llm-models-research/fine-tuning-candidates.md) | 适合微调的模型推荐 |
-| [模型发展趋势](./03-llm-models-research/model-trends.md) | 行业动态与技术方向 |
+| # | 文档 | 简介 |
+|---|------|------|
+| 1 | [LLM 市场全景概览](./03-llm-models-research/01-llm-landscape-overview.md) | 全局分类、市场格局、主流模型一览与选型维度 |
+| 2 | [OpenAI GPT 系列](./03-llm-models-research/02-openai-gpt-series.md) | GPT-4o、GPT-4o mini、o1、o3-mini 详细调研与对比 |
+| 3 | [Anthropic Claude 系列](./03-llm-models-research/03-anthropic-claude.md) | Claude 3/3.5/3.7 系列特性、安全机制与集成指南 |
+| 4 | [Google Gemini 系列](./03-llm-models-research/04-google-gemini.md) | Gemini 2.0 Flash、1.5 Pro、Gemma 开源模型 |
+| 5 | [Meta LLaMA 系列](./03-llm-models-research/05-meta-llama.md) | LLaMA 3.1/3.2/3.3 规格、部署与微调指南 |
+| 6 | [阿里通义千问（Qwen）](./03-llm-models-research/06-alibaba-qwen.md) | Qwen2.5 全系列、代码/数学专项、中文优势 |
+| 7 | [DeepSeek 系列](./03-llm-models-research/07-deepseek.md) | DeepSeek-V3、R1 技术突破、超低成本分析 |
+| 8 | [其他主要模型](./03-llm-models-research/08-other-major-models.md) | Mistral、Phi、ERNIE、混元、ChatGLM、Yi、InternLM 等 |
+| 9 | [全面模型对比表格](./03-llm-models-research/09-model-comparison.md) | 多维度横向对比：性能、成本、延迟、上下文、合规 |
+| 10 | [模型选型指南](./03-llm-models-research/10-model-selection-guide.md) | 场景化决策树、Java 集成策略与成本控制 |
+| 11 | [微调候选模型](./03-llm-models-research/11-fine-tuning-candidates.md) | 微调方法对比、候选模型推荐、工具链指南 |
+| 12 | [模型发展趋势](./03-llm-models-research/12-model-trends.md) | 推理革命、MoE 架构、多模态演进与市场预测 |
 
 ---
 
