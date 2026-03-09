@@ -4,24 +4,17 @@
 
 LLM Agent 的标准架构由以下四大核心组件构成：
 
+```mermaid
+flowchart TD
+    Input["用户 / 环境输入"] --> Perception["1. 感知层<br/>Perception"]
+    Perception --> Reasoning["2. 推理核心<br/>Reasoning / Planning"]
+    Memory["4. 记忆层<br/>Memory"] <--> Reasoning
+    Reasoning --> Action["3. 行动层<br/>Action / Tool Call"]
+    Action --> Feedback["外部工具执行 / 环境反馈"]
+    Feedback --> Perception
 ```
-┌─────────────────────────────────────────────┐
-│                  LLM Agent                  │
-│                                             │
-│  ┌───────────┐    ┌──────────────────────┐  │
-│  │  感知层    │───▶│     推理核心（LLM）   │  │
-│  │(Perception)│    │  (Reasoning/Planning) │  │
-│  └───────────┘    └──────────┬───────────┘  │
-│                              │               │
-│  ┌───────────┐    ┌──────────▼───────────┐  │
-│  │  记忆层    │◀──│     行动层（Action）   │  │
-│  │  (Memory) │    │  (Tool Call / Output) │  │
-│  └───────────┘    └──────────────────────┘  │
-└─────────────────────────────────────────────┘
-         ▲                        │
-         │       环境(Environment) │
-         └────────────────────────┘
-```
+
+其中，外部工具执行结果或环境变化会作为下一轮输入重新进入感知层，从而形成完整的感知-推理-行动循环。
 
 ## 四大核心组件详解
 

@@ -4,7 +4,7 @@
 
 ## 目录
 
-1. [什么是 Agent](./01-agent-basics/what-is-agent.md)
+1. [什么是 Agent](./01-agent-basics/01-what-is-agent.md)
 2. [Agent 架构：感知-推理-行动循环](./01-agent-basics/02-agent-architecture.md)
 3. [LLM 驱动的 Agent（ReAct、规划等）](./01-agent-basics/03-llm-agents.md)
 4. [Agent 工具（Tools / Function Calling）](./01-agent-basics/04-agent-tools.md)
