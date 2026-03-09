@@ -1,0 +1,2 @@
+# What is an Agent
+An agent is an entity that perceives its environment through sensors and acts upon that environment through actuators. Agents can be simple, like an automated thermostat, or complex, like a self-driving car, depending on the sophistication of their decision-making processes and the environments in which they operate.
