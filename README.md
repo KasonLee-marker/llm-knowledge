@@ -66,21 +66,23 @@
 
 ---
 
-## 04 - Agent 框架
+## 04 - Agent 框架 ✅（已完善）
 
 > 模块入口：[04-agent-frameworks.md](./04-agent-frameworks.md)
 
 | # | 文档 | 简介 |
 |---|------|------|
 | 1 | [LangChain 概述](./04-agent-frameworks/01-langchain-overview.md) | LangChain 核心概念与生态 |
-| 2 | [LangChain in Java](./04-agent-frameworks/02-langchain-in-java.md) | Java 集成实践 |
+| 2 | [LangChain in Java](./04-agent-frameworks/02-langchain-in-java.md) | Java 集成实践（LangChain4j、Spring AI）|
 | 3 | [Semantic Kernel](./04-agent-frameworks/03-semantic-kernel.md) | 微软 Semantic Kernel 框架 |
 | 4 | [LlamaIndex](./04-agent-frameworks/04-llamaindex.md) | RAG 专项框架 |
 | 5 | [自定义 Agent 开发](./04-agent-frameworks/05-custom-agent-development.md) | 不依赖框架的 Agent 工程实践 |
 
 ---
 
-## 05 - LLM APIs 与服务提供商
+## 05 - LLM APIs 与服务提供商 ✅（已完善）
+
+> 模块入口：[05-llm-apis-providers.md](./05-llm-apis-providers.md)
 
 | # | 文档 | 简介 |
 |---|------|------|
@@ -89,7 +91,17 @@
 | 3 | [Anthropic Claude API](./05-llm-apis-providers/03-anthropic-claude.md) | Messages API 与 Claude 特性 |
 | 4 | [Google Gemini API](./05-llm-apis-providers/04-google-gemini.md) | Vertex AI 与 Gemini API |
 | 5 | [本地 LLM 部署](./05-llm-apis-providers/05-local-llms.md) | Ollama、vLLM、LM Studio |
-| 6 | [API 集成模式](./05-llm-apis-providers/06-api-integration-patterns.md) | 统一客户端抽象、熔断、限流 |
+| 6 | [API 集成模式](./05-llm-apis-providers/06-api-integration-patterns.md) | 统一客户端抽象、熔断、限流、缓存 |
+
+---
+
+## 更新日志
+
+| 日期 | 更新内容 |
+|------|---------|
+| 2026-03-09 | ✅ 完善 04 Agent 框架模块（5篇文档）|
+| 2026-03-09 | ✅ 完善 05 LLM APIs 模块（6篇文档）|
+| 2026-03-09 | ✅ 更新 03 LLM 模型研究（时间线、最新动态）|
 
 ---
 
@@ -101,3 +113,16 @@
                    ↓
            03 LLM 模型研究（按需查阅）
 ```
+
+---
+
+## 关于 03 模块的说明
+
+03 LLM 模型研究模块已包含较完整的 2025 年模型信息，包括：
+- GPT-4.1 / o3 / o4-mini
+- Claude 3.7 / Gemini 2.5
+- DeepSeek-V3 / Qwen3 / Kimi k2
+
+**已更新**：2025年3月后时间线（Gemini 2.5 Flash、GPT-4.5 等）
+
+如需进一步更新特定模型信息，请告诉我具体需要补充哪些内容。
