@@ -1,2 +1,55 @@
-# What is an Agent
-An agent is an entity that perceives its environment through sensors and acts upon that environment through actuators. Agents can be simple, like an automated thermostat, or complex, like a self-driving car, depending on the sophistication of their decision-making processes and the environments in which they operate.
+# 什么是 Agent（What is an Agent）
+
+## 定义
+
+Agent（智能体）是一个能够**感知环境**（Perception）、**进行推理**（Reasoning）并**采取行动**（Action）以实现特定目标的自主实体。它可以是一个软件程序、机器人或人类。
+
+在 AI 领域，Agent 通常指一种**自主软件系统**，能够接收输入（文本、传感器数据、API 响应等），通过内部逻辑或模型进行决策，并执行相应的操作（调用工具、生成输出、修改状态等）。
+
+## Agent 的核心特征
+
+| 特征 | 说明 |
+|------|------|
+| **自主性（Autonomy）** | 无需持续人工干预，能独立完成任务 |
+| **感知能力（Perception）** | 通过传感器/输入接口获取环境信息 |
+| **行动能力（Action）** | 通过执行器/输出接口影响环境 |
+| **目标导向（Goal-oriented）** | 行为由特定目标驱动 |
+| **适应性（Adaptability）** | 根据环境变化调整行为策略 |
+
+## Agent 的分类
+
+### 1. 按架构分类
+
+- **反应式 Agent（Reactive Agent）**：直接根据当前感知做出反应，没有内部状态或世界模型。示例：简单的规则引擎、基于条件反射的机器人。
+- **审思式 Agent（Deliberative Agent）**：维护内部世界模型，通过推理和规划制定行动策略。示例：基于搜索算法的路径规划 Agent。
+- **混合式 Agent（Hybrid Agent）**：结合反应式和审思式，快速响应紧急情况同时进行长期规划。示例：现代自动驾驶系统。
+- **LLM 驱动的 Agent（LLM-powered Agent）**：以大语言模型作为推理核心，结合工具调用、记忆和规划能力。示例：ChatGPT、GitHub Copilot、AutoGPT。
+
+### 2. 按能力分类
+
+- **单任务 Agent**：专注于特定任务（如代码补全、问答）。
+- **多任务 Agent**：能处理多种不同类型的任务。
+- **多 Agent 系统（Multi-Agent System）**：多个 Agent 协作完成复杂目标。
+
+## LLM Agent vs 传统 Agent
+
+| 维度 | 传统 Agent | LLM Agent |
+|------|-----------|-----------|
+| 推理方式 | 规则/搜索算法 | 大语言模型（生成式推理）|
+| 灵活性 | 受限于预定义规则 | 可处理开放域问题 |
+| 工具使用 | 硬编码工具调用 | 动态决策调用哪个工具 |
+| 上下文理解 | 有限 | 支持长对话和复杂语境 |
+| 可解释性 | 较高（规则透明）| 较低（模型黑盒）|
+
+## 简单示例场景
+
+**场景**：用户问 "帮我查一下今天北京的天气，并提醒我下午3点开会"。
+
+一个 LLM Agent 的处理流程：
+1. **感知**：接收用户自然语言输入
+2. **推理**：理解意图 → 需要查天气 + 设置提醒两个子任务
+3. **规划**：拆解为两步：调用天气 API → 调用日历 API
+4. **行动**：依次调用工具并整合结果
+5. **响应**：生成自然语言回答，告知用户天气和提醒设置结果
+
+---
