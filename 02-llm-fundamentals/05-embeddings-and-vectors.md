@@ -44,7 +44,7 @@ Embedding 的核心应用是计算两段文本的语义相似度：
 
 ### 余弦相似度（最常用）
 
-$$\text{cosine\_similarity}(A, B) = \frac{A \cdot B}{|A| \times |B|}$$
+$$\text{cosine similarity}(\mathbf{A},\ \mathbf{B}) = \frac{\mathbf{A} \cdot \mathbf{B}}{\lVert\mathbf{A}\rVert \cdot \lVert\mathbf{B}\rVert}$$
 
 ```java
 public double cosineSimilarity(double[] vecA, double[] vecB) {
@@ -87,25 +87,27 @@ RAG 是 Embedding 最重要的应用场景，解决了 LLM 的"知识截止"和"
 
 ### RAG 工作流程
 
-```
-                    ┌─────────────────────────────────────┐
-                    │           知识库构建（离线）           │
-                    │                                      │
-                    │  原始文档 → 分块（Chunking）→         │
-                    │  Embedding 生成 → 存入向量数据库       │
-                    └─────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph offline["🗄️ 知识库构建（离线 / 预处理）"]
+        direction LR
+        D1["原始文档"] --> D2["分块\n（Chunking）"] --> D3["生成\nEmbedding"] --> D4["存入\n向量数据库（Vector DB）"]
+    end
 
-用户提问
-    ↓
-将问题转化为 Query Embedding
-    ↓
-在向量数据库中检索相似文档（Top-K）
-    ↓
-将检索结果拼接进 Prompt（Augmentation）
-    ↓
-LLM 基于检索到的知识生成答案（Generation）
-    ↓
-返回最终回答（附带来源引用）
+    Q["用户提问"] --> QE["生成 Query Embedding"]
+    QE --> RET["在 Vector DB 中\n检索相似文档（Top-K）"]
+    D4 -. "索引查询" .-> RET
+    RET --> AUG["将检索结果拼接进 Prompt\n（Augmentation）"]
+    AUG --> GEN["LLM 基于检索到的知识\n生成答案（Generation）"]
+    GEN --> ANS["返回最终回答\n（附带来源引用）"]
+
+    style offline fill:#f1f5f9,stroke:#94a3b8
+    style Q   fill:#dbeafe,stroke:#3b82f6,color:#1e3a5f
+    style QE  fill:#ede9fe,stroke:#8b5cf6,color:#3b0764
+    style RET fill:#fef9c3,stroke:#eab308,color:#713f12
+    style AUG fill:#ffedd5,stroke:#f97316,color:#431407
+    style GEN fill:#dcfce7,stroke:#22c55e,color:#14532d
+    style ANS fill:#dcfce7,stroke:#22c55e,color:#14532d
 ```
 
 ### Java RAG 实现示例
