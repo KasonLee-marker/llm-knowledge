@@ -96,6 +96,84 @@
 
 ---
 
+## 06 - RAG / 知识检索 ✅（已完善）
+
+> 模块入口：[06-rag-knowledge-retrieval.md](./06-rag-knowledge-retrieval.md)
+
+| # | 文档 | 简介 |
+|---|------|------|
+| 1 | [RAG 基础概念](./06-rag-knowledge-retrieval/01-rag-basics.md) | 什么是 RAG、核心流程、与 Fine-tuning 对比 |
+| 2 | [Embedding 模型选型](./06-rag-knowledge-retrieval/02-embedding-models.md) | OpenAI/BGE/M3E/Jina 对比与 Java 集成 |
+| 3 | [向量数据库对比](./06-rag-knowledge-retrieval/03-vector-databases.md) | Milvus/Pinecone/Weaviate/Qdrant 选型 |
+| 4 | [检索策略与优化](./06-rag-knowledge-retrieval/04-retrieval-strategies.md) | Dense/Sparse/Hybrid 检索与重排序 |
+| 5 | [RAG 架构演进](./06-rag-knowledge-retrieval/05-rag-architectures.md) | Naive → Advanced → Modular RAG |
+| 6 | [文档处理与分块](./06-rag-knowledge-retrieval/06-document-processing.md) | 文档加载、分块策略、元数据管理 |
+| 7 | [RAG 评估与优化](./06-rag-knowledge-retrieval/07-rag-evaluation.md) | 评估指标、常见问题、优化策略 |
+| 8 | [Java 实战](./06-rag-knowledge-retrieval/08-java-rag-practice.md) | Spring Boot + Milvus 完整项目 |
+
+---
+
+## 07 - 多智能体系统 ✅（已完善）
+
+> 模块入口：[07-multi-agent-systems.md](./07-multi-agent-systems.md)
+
+| # | 文档 | 简介 |
+|---|------|------|
+| 1 | [多智能体基础](./07-multi-agent-systems/01-multi-agent-basics.md) | 概念、单 Agent vs 多 Agent、核心术语 |
+| 2 | [Agent 通信机制](./07-multi-agent-systems/02-agent-communication.md) | 对话式、共享内存、消息队列 |
+| 3 | [协作模式](./07-multi-agent-systems/03-coordination-patterns.md) | 分工、竞争、层级、市场模式 |
+| 4 | [主流框架对比](./07-multi-agent-systems/04-frameworks-comparison.md) | AutoGen/CrewAI/LangGraph/MetaGPT |
+| 5 | [任务分解与规划](./07-multi-agent-systems/05-task-decomposition.md) | 分解策略、规划算法、动态调整 |
+| 6 | [冲突解决](./07-multi-agent-systems/06-conflict-resolution.md) | 冲突类型、检测机制、解决策略 |
+| 7 | [Java 实战](./07-multi-agent-systems/07-java-multi-agent-practice.md) | Spring Boot 多智能体系统实现 |
+
+---
+
+## 08 - 模型安全与对齐 ✅（已完善）
+
+> 模块入口：[08-model-safety-alignment.md](./08-model-safety-alignment.md)
+
+| # | 文档 | 简介 |
+|---|------|------|
+| 1 | [安全概述](./08-model-safety-alignment/01-safety-overview.md) | LLM 安全风险、安全生命周期 |
+| 2 | [Prompt 注入](./08-model-safety-alignment/02-prompt-injection.md) | 攻击类型、防御策略、Java 实现 |
+| 3 | [输出审查](./08-model-safety-alignment/03-output-safety.md) | 有害内容检测、PII 过滤 |
+| 4 | [隐私保护](./08-model-safety-alignment/04-privacy-protection.md) | PII 检测、数据脱敏、差分隐私 |
+| 5 | [越狱防御](./08-model-safety-alignment/05-jailbreak-defense.md) | 攻击类型、多层防御策略 |
+| 6 | [幻觉缓解](./08-model-safety-alignment/06-hallucination-mitigation.md) | 检测方法、缓解策略 |
+| 7 | [Java 实战](./08-model-safety-alignment/07-java-safety-practice.md) | Spring Boot 安全系统实现 |
+
+---
+
+## 09 - 性能优化与监控 ✅（已完善）
+
+> 模块入口：[09-performance-monitoring.md](./09-performance-monitoring.md)
+
+| # | 文档 | 简介 |
+|---|------|------|
+| 1 | [性能指标](./09-performance-monitoring/01-performance-metrics.md) | TTFT、TPS、RPM、成本指标 |
+| 2 | [缓存策略](./09-performance-monitoring/02-caching-strategies.md) | 三级缓存架构（本地+Redis+语义）|
+| 3 | [流式优化](./09-performance-monitoring/03-streaming-optimization.md) | SSE、WebSocket、增量渲染 |
+| 4 | [成本优化](./09-performance-monitoring/04-cost-optimization.md) | 模型路由、Token 优化、批量处理 |
+| 5 | [可观测性](./09-performance-monitoring/05-observability.md) | Logging、Tracing、Metrics、工具推荐 |
+| 6 | [Java 实战](./09-performance-monitoring/06-java-performance-practice.md) | Micrometer + Prometheus + Grafana |
+
+---
+
+## 10 - 实战案例集 ✅（已完善）
+
+> 模块入口：[10-practical-cases.md](./10-practical-cases.md)
+
+| # | 文档 | 简介 |
+|---|------|------|
+| 1 | [代码生成助手](./10-practical-cases/01-code-assistant.md) | 代码补全、审查、重构助手实现 |
+| 2 | [智能客服机器人](./10-practical-cases/02-customer-service-bot.md) | RAG + 多轮对话客服系统 |
+| 3 | [文档问答系统](./10-practical-cases/03-doc-qa-system.md) | 企业知识库问答系统 |
+| 4 | [SQL 生成助手](./10-practical-cases/04-sql-assistant.md) | Text2SQL 实现与验证 |
+| 5 | [数据分析助手](./10-practical-cases/05-data-analysis-assistant.md) | 数据可视化分析助手 |
+
+---
+
 ## 更新日志
 
 | 日期 | 更新内容 |
@@ -105,17 +183,37 @@
 | 2026-03-09 | ✅ 更新 03 LLM 模型研究（时间线、最新动态）|
 | 2026-03-10 | ✅ 更新 03 模块：添加 2026年2月最新模型（Gemini 3.1 Pro、Claude Opus 4.6、GPT-5.2）|
 | 2026-03-10 | ✅ 新增 04 模块：2026年框架对比与趋势分析|
+| 2026-03-10 | ✅ **新增 06-10 模块**：RAG、多智能体、安全、性能优化、实战案例（35+篇文档）|
 
 ---
 
 ## 快速上手
 
+### 入门路径
+
 ```
-入门路径：
+第一阶段（基础）：
 01 Agent 基础 → 02 LLM 基础 → 04 Agent 框架 → 05 APIs
-                   ↓
-           03 LLM 模型研究（按需查阅）
+                      ↓
+              03 LLM 模型研究（按需查阅）
+
+第二阶段（进阶）：
+06 RAG 知识检索 → 07 多智能体系统 → 08 模型安全与对齐
+                      ↓
+              09 性能优化与监控
+
+第三阶段（实战）：
+10 实战案例集（代码助手、客服机器人、文档问答等）
 ```
+
+### 学习建议
+
+| 目标 | 推荐路径 |
+|------|---------|
+| 快速入门 | 01 → 02 → 04 → 05 |
+| 构建 RAG 应用 | 02 → 03 → 06 → 10 |
+| 生产级部署 | 06 → 07 → 08 → 09 → 10 |
+| 全栈掌握 | 按顺序完成所有模块 |
 
 ---
 
