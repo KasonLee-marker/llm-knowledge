@@ -77,6 +77,7 @@
 | 3 | [Semantic Kernel](./04-agent-frameworks/03-semantic-kernel.md) | 微软 Semantic Kernel 框架 |
 | 4 | [LlamaIndex](./04-agent-frameworks/04-llamaindex.md) | RAG 专项框架 |
 | 5 | [自定义 Agent 开发](./04-agent-frameworks/05-custom-agent-development.md) | 不依赖框架的 Agent 工程实践 |
+| 6 | [框架对比 2026](./04-agent-frameworks/06-frameworks-comparison-2026.md) | 2026年最新框架趋势与选型指南 |
 
 ---
 
@@ -102,6 +103,8 @@
 | 2026-03-09 | ✅ 完善 04 Agent 框架模块（5篇文档）|
 | 2026-03-09 | ✅ 完善 05 LLM APIs 模块（6篇文档）|
 | 2026-03-09 | ✅ 更新 03 LLM 模型研究（时间线、最新动态）|
+| 2026-03-10 | ✅ 更新 03 模块：添加 2026年2月最新模型（Gemini 3.1 Pro、Claude Opus 4.6、GPT-5.2）|
+| 2026-03-10 | ✅ 新增 04 模块：2026年框架对比与趋势分析|
 
 ---
 
