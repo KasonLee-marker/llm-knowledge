@@ -14,22 +14,23 @@
 
 ### 1.1 评估维度
 
-```
-RAG 评估
-    ├── 检索质量 (Retrieval Quality)
-    │       ├── 相关性 (Relevance)
-    │       ├── 召回率 (Recall)
-    │       └── 精确率 (Precision)
-    │
-    ├── 生成质量 (Generation Quality)
-    │       ├── 忠实性 (Faithfulness)
-    │       ├── 答案相关性 (Answer Relevance)
-    │       └── 上下文利用率 (Context Utilization)
-    │
-    └── 端到端质量 (End-to-End Quality)
-            ├── 正确性 (Correctness)
-            ├── 完整性 (Completeness)
-            └── 有用性 (Helpfulness)
+```mermaid
+flowchart TB
+    A[RAG 评估] --> B[检索质量<br/>Retrieval Quality]
+    A --> C[生成质量<br/>Generation Quality]
+    A --> D[端到端质量<br/>End-to-End Quality]
+    
+    B --> B1[相关性<br/>Relevance]
+    B --> B2[召回率<br/>Recall]
+    B --> B3[精确率<br/>Precision]
+    
+    C --> C1[忠实性<br/>Faithfulness]
+    C --> C2[答案相关性<br/>Answer Relevance]
+    C --> C3[上下文利用率<br/>Context Utilization]
+    
+    D --> D1[正确性<br/>Correctness]
+    D --> D2[完整性<br/>Completeness]
+    D --> D3[有用性<br/>Helpfulness]
 ```
 
 ### 1.2 指标对比表
@@ -558,20 +559,15 @@ public String generateWithFaithfulnessConstraint(
 
 ### 4.4 持续优化流程
 
-```
-收集反馈
-    ↓
-分析问题（检索/生成）
-    ↓
-定位原因
-    ↓
-实施优化
-    ↓
-A/B 测试
-    ↓
-评估效果
-    ↓
-部署上线
+```mermaid
+flowchart TB
+    A[收集反馈] --> B[分析问题<br/>检索/生成]
+    B --> C[定位原因]
+    C --> D[实施优化]
+    D --> E[A/B 测试]
+    E --> F[评估效果]
+    F --> G[部署上线]
+    G --> A
 ```
 
 ---

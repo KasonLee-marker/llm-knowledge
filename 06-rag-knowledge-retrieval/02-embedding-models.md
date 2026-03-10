@@ -19,12 +19,24 @@
 
 Embedding（嵌入向量）是将文本、图像等非结构化数据映射到高维数值向量的技术。语义相近的内容，其向量在高维空间中的距离也更近。
 
-```
-文本 → Embedding 模型 → 高维向量（如 1024 维）
-
-"今天天气很好"    → [0.12, -0.45, 0.78, ...]
-"今天阳光明媚"    → [0.11, -0.44, 0.79, ...]  ← 语义相近，向量接近
-"明天要开会"     → [-0.32, 0.21, -0.15, ...]  ← 语义不同，向量差异大
+```mermaid
+flowchart LR
+    A[文本] --> B[Embedding 模型]
+    B --> C[高维向量<br/>如 1024 维]
+    
+    subgraph "示例"
+        D["今天天气很好"] --> E["向量 A"]
+        F["今天阳光明媚"] --> G["向量 B"]
+        H["明天要开会"] --> I["向量 C"]
+    end
+    
+    E -.->|语义相近| G
+    I -.->|语义不同| E
+    I -.->|语义不同| G
+    
+    style E fill:#e8f5e9
+    style G fill:#e8f5e9
+    style I fill:#fff3e0
 ```
 
 ### 核心应用场景
@@ -374,16 +386,25 @@ public class LocalEmbeddingService {
 
 ### 决策流程图
 
-```
-是否需要最高精度？
-    ├── 是 → OpenAI text-embedding-3-large
-    └── 否 → 是否中文场景为主？
-              ├── 是 → 数据能否出域？
-              │         ├── 能 → OpenAI 3-small
-              │         └── 不能 → BGE-M3 本地部署
-              └── 否 → 是否多语言？
-                        ├── 是 → Jina v3 / BGE-M3
-                        └── 否 → E5-large / BGE-large
+```mermaid
+flowchart TD
+    Start[开始] --> Q1{是否需要最高精度?}
+    Q1 -->|是| A1[OpenAI text-embedding-3-large]
+    Q1 -->|否| Q2{是否中文场景为主?}
+    
+    Q2 -->|是| Q3{数据能否出域?}
+    Q3 -->|能| A2[OpenAI 3-small]
+    Q3 -->|不能| A3[BGE-M3 本地部署]
+    
+    Q2 -->|否| Q4{是否多语言?}
+    Q4 -->|是| A4[Jina v3 / BGE-M3]
+    Q4 -->|否| A5[E5-large / BGE-large]
+    
+    style A1 fill:#e3f2fd
+    style A2 fill:#e8f5e9
+    style A3 fill:#fff3e0
+    style A4 fill:#f3e5f5
+    style A5 fill:#fce4ec
 ```
 
 ---

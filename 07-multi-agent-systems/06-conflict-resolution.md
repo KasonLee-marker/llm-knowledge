@@ -145,7 +145,7 @@ graph TB
         TaskA --> Conflict2
         TaskC --> Conflict2
         
-        Note: 如果并行执行会导致问题
+        %% 如果并行执行会导致问题
     end
     
     style TaskA fill:#ffe0e0
