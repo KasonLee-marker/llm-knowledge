@@ -206,26 +206,26 @@ graph TB
         
         subgraph "顺序依赖"
             S1[任务A] --> S2[任务B]
-            Note: 任务B必须在任务A完成后开始
+            %% 任务B必须在任务A完成后开始
         end
         
         subgraph "并行依赖"
             P0[任务A] --> P1[任务B]
             P0 --> P2[任务C]
-            Note: 任务B和C可以并行执行
+            %% 任务B和C可以并行执行
         end
         
         subgraph "汇聚依赖"
             C1[任务A] --> C3[任务C]
             C2[任务B] --> C3
-            Note: 任务C需要等待A和B都完成
+            %% 任务C需要等待A和B都完成
         end
         
         subgraph "条件依赖"
             CD1{条件判断}
             CD1 -->|条件1| CD2[任务A]
             CD1 -->|条件2| CD3[任务B]
-            Note: 根据条件选择执行路径
+            %% 根据条件选择执行路径
         end
     end
 ```

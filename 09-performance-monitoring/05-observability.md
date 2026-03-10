@@ -202,7 +202,7 @@ graph TB
 ```mermaid
 graph LR
     subgraph "标签设计"
-        A[模型标签] --> E[llm_requests_total{model="gpt-4"}]
+        A[模型标签] --> E["llm_requests_total<br/>model=gpt-4"]
         B[状态标签] --> E
         C[操作标签] --> E
         D[环境标签] --> E

@@ -47,7 +47,7 @@ graph LR
         A1 <-->|自然语言消息| A3
         
         subgraph "消息格式"
-            M1[from: Agent A<br/>to: Agent B<br/>content: "请帮我分析..."<br/>timestamp: 1234567890]
+            M1["from: Agent A<br/>to: Agent B<br/>content: 请帮我分析<br/>timestamp: 1234567890"]
         end
     end
     
