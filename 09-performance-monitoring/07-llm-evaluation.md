@@ -366,6 +366,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * LLM-as-Judge 评估器
  * 使用强模型（GPT-4）评判被测应用的输出质量
@@ -566,7 +569,8 @@ public class LlmEvaluationPipelineService {
             timerSample.stop(meterRegistry.timer("llm.eval.duration",
                     "sample_id", sample.getId()));
 
-            log.info("样本 {} 评估完成，质量得分: {:.2f}", sample.getId(), merged.getQualityScore());
+            log.info("样本 {} 评估完成，质量得分: {}", sample.getId(),
+                    String.format("%.2f", merged.getQualityScore()));
             return merged;
 
         } catch (TimeoutException e) {
