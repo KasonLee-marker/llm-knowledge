@@ -31,7 +31,7 @@ def is_anchor_only(link: str) -> bool:
     return link.startswith('#')
 
 
-def resolve_link(source_file: Path, link: str, root: Path) -> Path:
+def resolve_link(source_file: Path, link: str, root: Path) -> Path | None:
     """
     将相对链接解析为绝对路径
     
