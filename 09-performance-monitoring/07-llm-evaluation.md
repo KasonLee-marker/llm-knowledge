@@ -894,4 +894,4 @@ Level 3（完整评估）：LLM-as-Judge
 
 ---
 
-> 📌 上一节：[告警系统](./06-alerting-systems.md) | 返回：[性能监控总览](../09-performance-monitoring.md)
+> 📌 上一节：[Java 性能实战](./06-java-performance-practice.md) | 返回：[性能监控总览](../09-performance-monitoring.md)

@@ -1,6 +1,6 @@
 # 10 - 实战案例集（Practical Cases）
 
-本模块通过 5 个完整的实战案例，展示如何将 LLM 技术应用于实际业务场景。每个案例包含完整的需求分析、架构设计、核心功能实现和 Java 代码示例，帮助开发者快速掌握 LLM 应用开发的核心技能。
+本模块通过 7 个完整的实战案例，展示如何将 LLM 技术应用于实际业务场景。每个案例包含完整的需求分析、架构设计、核心功能实现和 Java 代码示例，帮助开发者快速掌握 LLM 应用开发的核心技能。
 
 ## 目录
 
@@ -11,6 +11,8 @@
 | 3 | [文档问答系统](./10-practical-cases/03-doc-qa-system.md) | 基于私有文档的知识问答平台 |
 | 4 | [SQL 生成助手](./10-practical-cases/04-sql-assistant.md) | 自然语言转 SQL 的智能数据库查询工具 |
 | 5 | [数据分析助手](./10-practical-cases/05-data-analysis-assistant.md) | 自动化数据分析与可视化报告生成 |
+| 6 | [AI 自动化测试生成](./10-practical-cases/06-automated-testing.md) | LLM 驱动的单元测试与集成测试自动生成 |
+| 7 | [智能运维 AIOps](./10-practical-cases/07-intelligent-ops.md) | 日志分析、告警摘要与根因分析 |
 
 ## 实战案例架构总览
 
