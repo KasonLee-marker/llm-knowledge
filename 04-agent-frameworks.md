@@ -13,6 +13,8 @@
 | 3 | [Semantic Kernel](./04-agent-frameworks/03-semantic-kernel.md) | 微软 Semantic Kernel 框架 |
 | 4 | [LlamaIndex](./04-agent-frameworks/04-llamaindex.md) | RAG 专项框架 |
 | 5 | [自定义 Agent 开发](./04-agent-frameworks/05-custom-agent-development.md) | 不依赖框架的 Agent 工程实践 |
+| 6 | [框架对比 2026](./04-agent-frameworks/06-frameworks-comparison-2026.md) | 主流框架横向对比 |
+| 7 | [Spring AI](./04-agent-frameworks/07-spring-ai.md) | Spring 官方 AI 框架完整指南 |
 
 ---
 

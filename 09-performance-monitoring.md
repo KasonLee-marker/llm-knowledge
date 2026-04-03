@@ -12,6 +12,7 @@
 | 4 | [成本优化](./09-performance-monitoring/04-cost-optimization.md) | 模型选择策略、Token优化、批量处理 |
 | 5 | [可观测性](./09-performance-monitoring/05-observability.md) | Logging、Tracing、Metrics 与工具推荐 |
 | 6 | [Java 实战](./09-performance-monitoring/06-java-performance-practice.md) | Spring Boot 性能优化与 Micrometer 集成 |
+| 7 | [LLM 评估体系](./09-performance-monitoring/07-llm-evaluation.md) | LLM-as-Judge、RAGAS、DeepEval 评估方法 |
 
 ## 核心概念速览
 

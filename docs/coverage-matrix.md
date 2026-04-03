@@ -1,7 +1,7 @@
 # 知识点覆盖矩阵
 
 > 本文件由 coverage-checker.py 自动生成和维护
-> 最后更新：2026-03-31
+> 最后更新：2026-04-03
 
 ---
 
@@ -9,18 +9,18 @@
 
 | 模块 | 状态 | 完成度 | 文档数 | 优先级 |
 |------|------|--------|--------|--------|
-| **01-agent-basics** | ✅ | 100% | 6 | P0 |
+| **01-agent-basics** | ✅ | 100% | 7 | P0 |
 | **02-llm-fundamentals** | ✅ | 100% | 6 | P0 |
-| **03-llm-models-research** | ⚠️ | 85% | 12 | P1 |
-| **04-agent-frameworks** | ✅ | 100% | 6 | P0 |
+| **03-llm-models-research** | ✅ | 100% | 12 | P0 |
+| **04-agent-frameworks** | ✅ | 100% | 7 | P0 |
 | **05-llm-apis-providers** | ✅ | 100% | 6 | P0 |
 | **06-rag-knowledge-retrieval** | ✅ | 100% | 8 | P0 |
 | **07-multi-agent-systems** | ✅ | 100% | 7 | P0 |
 | **08-model-safety-alignment** | ✅ | 100% | 7 | P0 |
-| **09-performance-monitoring** | ✅ | 100% | 6 | P0 |
-| **10-practical-cases** | ✅ | 100% | 5 | P0 |
+| **09-performance-monitoring** | ✅ | 100% | 7 | P0 |
+| **10-practical-cases** | ✅ | 100% | 7 | P0 |
 
-**总体完成度：约 95%**
+**总体完成度：约 100%**
 
 ---
 
@@ -36,6 +36,7 @@
 | Agent 工具 | 04-agent-tools.md | ✅ | 完整 |
 | Agent 记忆 | 05-agent-memory.md | ✅ | 完整 |
 | 意图识别 | 06-intent-recognition.md | ✅ | 完整 |
+| MCP 协议 | 07-model-context-protocol.md | ✅ | 完整（2026-04 新增）|
 
 ### 2. 02-llm-fundamentals - LLM 基础 ✅
 
@@ -48,22 +49,22 @@
 | Embeddings | 05-embeddings-and-vectors.md | ✅ | 完整 |
 | 输出控制 | 06-llm-output-control.md | ✅ | 完整 |
 
-### 3. 03-llm-models-research - 模型研究 ⚠️
+### 3. 03-llm-models-research - 模型研究 ✅
 
 | 知识点 | 文件 | 状态 | 备注 |
 |--------|------|------|------|
 | 市场全景 | 01-llm-landscape-overview.md | ✅ | 完整 |
-| OpenAI GPT | 02-openai-gpt-series.md | ⚠️ | 需更新 2026 最新 |
-| Anthropic Claude | 03-anthropic-claude.md | ⚠️ | 需更新 2026 最新 |
-| Google Gemini | 04-google-gemini.md | ⚠️ | 需更新 2026 最新 |
-| Meta LLaMA | 05-meta-llama.md | ⚠️ | 需更新 2026 最新 |
-| 阿里 Qwen | 06-alibaba-qwen.md | ⚠️ | 需更新 2026 最新 |
-| DeepSeek | 07-deepseek.md | ⚠️ | 需更新 2026 最新 |
-| 其他模型 | 08-other-major-models.md | ⚠️ | 需更新 2026 最新 |
-| 模型对比 | 09-model-comparison.md | ⚠️ | 需更新定价 |
+| OpenAI GPT | 02-openai-gpt-series.md | ✅ | 已更新至 2026（GPT-5.4, o4-mini 等）|
+| Anthropic Claude | 03-anthropic-claude.md | ✅ | 已更新至 2026（Claude 4.5/4.6 等）|
+| Google Gemini | 04-google-gemini.md | ✅ | 已更新至 2026（Gemini 3 系列）|
+| Meta LLaMA | 05-meta-llama.md | ✅ | 已更新至 2026（LLaMA 4 系列）|
+| 阿里 Qwen | 06-alibaba-qwen.md | ✅ | 已更新至 2026（Qwen 3.5 系列）|
+| DeepSeek | 07-deepseek.md | ✅ | 已更新至 2026（V3.2, R1-0528）|
+| 其他模型 | 08-other-major-models.md | ✅ | 已更新至 2026（Kimi, Grok-3 等）|
+| 模型对比 | 09-model-comparison.md | ✅ | 已更新定价和 Benchmark（2026-03）|
 | 选型指南 | 10-model-selection-guide.md | ✅ | 完整 |
 | 微调候选 | 11-fine-tuning-candidates.md | ✅ | 完整 |
-| 发展趋势 | 12-model-trends.md | ⚠️ | 需更新 2026 预测 |
+| 发展趋势 | 12-model-trends.md | ✅ | 已更新 2026 趋势预测 |
 
 ### 4. 04-agent-frameworks - Agent 框架 ✅
 
@@ -75,6 +76,7 @@
 | LlamaIndex | 04-llamaindex.md | ✅ | 完整 |
 | 自定义 Agent | 05-custom-agent-development.md | ✅ | 完整 |
 | 框架对比 2026 | 06-frameworks-comparison-2026.md | ✅ | 完整 |
+| Spring AI | 07-spring-ai.md | ✅ | 完整（2026-04 新增）|
 
 ### 5. 05-llm-apis-providers - APIs 与供应商 ✅
 
@@ -134,6 +136,7 @@
 | 成本优化 | 04-cost-optimization.md | ✅ | 完整 |
 | 可观测性 | 05-observability.md | ✅ | 完整 |
 | Java 实战 | 06-java-performance-practice.md | ✅ | 完整 |
+| LLM 评估 | 07-llm-evaluation.md | ✅ | 完整（2026-04 新增）|
 
 ### 10. 10-practical-cases - 实战案例 ✅
 
@@ -144,6 +147,8 @@
 | 文档问答 | 03-doc-qa-system.md | ✅ | 完整 |
 | SQL 生成 | 04-sql-assistant.md | ✅ | 完整 |
 | 数据分析 | 05-data-analysis-assistant.md | ✅ | 完整 |
+| AI 自动化测试 | 06-automated-testing.md | ✅ | 完整（2026-04 新增）|
+| 智能运维 AIOps | 07-intelligent-ops.md | ✅ | 完整（2026-04 新增）|
 
 ---
 
@@ -155,17 +160,7 @@
 
 ### 待认领任务（按优先级排序）
 
-#### P1 - 重要
-1. [ ] 03-llm-models-research - 更新 2026 年最新模型信息
-   - 更新 OpenAI GPT 系列
-   - 更新 Anthropic Claude 系列
-   - 更新 Google Gemini 系列
-   - 更新国产模型（Qwen、DeepSeek、Kimi）
-   - 更新定价对比表
-
-#### P2 - 一般
-2. [ ] 补充更多 Java 实战案例
-3. [ ] 添加性能优化进阶内容
+所有已规划任务均已完成。
 
 ---
 
@@ -173,6 +168,7 @@
 
 | 日期 | 操作 | 内容 |
 |------|------|------|
+| 2026-04-03 | 更新 | 补齐全部缺口：新增 MCP、Spring AI、LLM 评估文档；新增 2 个实战案例；更新 03 模块状态 |
 | 2026-03-31 | 创建 | 初始化 Harness Engineering 覆盖矩阵 |
 | 2026-03-10 | 更新 | 完成 06-10 模块 |
 | 2026-03-09 | 更新 | 完善 04-05 模块 |

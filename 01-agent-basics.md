@@ -10,6 +10,7 @@
 4. [Agent 工具（Tools / Function Calling）](./01-agent-basics/04-agent-tools.md)
 5. [Agent 记忆（Memory）](./01-agent-basics/05-agent-memory.md)
 6. [意图识别（Intent Recognition）](./01-agent-basics/06-intent-recognition.md)
+7. [MCP 协议（Model Context Protocol）](./01-agent-basics/07-model-context-protocol.md)
 
 ## 核心概念速览
 
