@@ -95,6 +95,8 @@ flowchart TB
 - LLM 驱动的 Agent（ReAct、规划等）
 - 工具调用与 Function Calling
 - 记忆系统设计
+- 意图识别
+- MCP 协议（Model Context Protocol）
 
 ### 02-llm-fundamentals - LLM 基础
 **定位**：大模型底层原理
@@ -104,14 +106,16 @@ flowchart TB
 - Function Calling 机制
 - 推理技术（CoT、ToT、ReAct）
 - Embeddings 与向量表示
+- LLM 输出控制
 
 ### 03-llm-models-research - 模型研究
 **定位**：模型选型参考，持续更新
 **核心内容**：
-- 2025+ 主流模型全景
+- 2026 主流模型全景
 - OpenAI / Anthropic / Google / Meta 系列
-- 国产模型（Qwen、DeepSeek、Kimi 等）
+- 国产模型（Qwen、DeepSeek、Kimi、GLM 等）
 - 定价对比与选型指南
+- 微调候选与趋势预测
 
 ### 04-agent-frameworks - Agent 框架
 **定位**：Java 生态框架选型
@@ -163,6 +167,7 @@ flowchart TB
 - 流式优化
 - 成本优化
 - 可观测性
+- LLM 评估体系
 
 ### 10-practical-cases - 实战案例
 **定位**：完整项目参考
@@ -171,6 +176,9 @@ flowchart TB
 - 智能客服机器人
 - 文档问答系统
 - SQL 生成助手
+- 数据分析助手
+- AI 自动化测试生成
+- 智能运维 AIOps
 
 ---
 
