@@ -7,13 +7,13 @@
 | # | 文档 | 简介 |
 |---|------|------|
 | 1 | [LLM 市场全景概览](./03-llm-models-research/01-llm-landscape-overview.md) | 全局分类、市场格局、主流模型一览与选型维度 |
-| 2 | [OpenAI GPT 系列](./03-llm-models-research/02-openai-gpt-series.md) | GPT-4o、GPT-4o mini、o1、o3-mini 详细调研与对比 |
-| 3 | [Anthropic Claude 系列](./03-llm-models-research/03-anthropic-claude.md) | Claude 3/3.5/3.7 系列特性、安全机制与集成指南 |
-| 4 | [Google Gemini 系列](./03-llm-models-research/04-google-gemini.md) | Gemini 2.0 Flash、1.5 Pro、Gemma 开源模型 |
-| 5 | [Meta LLaMA 系列](./03-llm-models-research/05-meta-llama.md) | LLaMA 3.1/3.2/3.3 规格、部署与微调指南 |
-| 6 | [阿里通义千问（Qwen）](./03-llm-models-research/06-alibaba-qwen.md) | Qwen2.5 全系列、代码/数学专项、中文优势 |
-| 7 | [DeepSeek 系列](./03-llm-models-research/07-deepseek.md) | DeepSeek-V3、R1 技术突破、超低成本分析 |
-| 8 | [其他主要模型](./03-llm-models-research/08-other-major-models.md) | Mistral、Phi、ERNIE、混元、ChatGLM、Yi、InternLM 等 |
+| 2 | [OpenAI GPT 系列](./03-llm-models-research/02-openai-gpt-series.md) | GPT-5.4/5.3 Instant、o4-mini 等 2026 最新对比 |
+| 3 | [Anthropic Claude 系列](./03-llm-models-research/03-anthropic-claude.md) | Claude Opus 4.6、Sonnet 4.6/4.5 系列特性与集成指南 |
+| 4 | [Google Gemini 系列](./03-llm-models-research/04-google-gemini.md) | Gemini 3.1 Pro/Flash-Lite、Gemma 开源模型 |
+| 5 | [Meta LLaMA 系列](./03-llm-models-research/05-meta-llama.md) | LLaMA 4 Scout/Maverick 规格、部署与微调指南 |
+| 6 | [阿里通义千问（Qwen）](./03-llm-models-research/06-alibaba-qwen.md) | Qwen3.5 全系列、双模式 MoE、中文优势 |
+| 7 | [DeepSeek 系列](./03-llm-models-research/07-deepseek.md) | DeepSeek V4/V3.2、R1-0528 技术突破、超低成本分析 |
+| 8 | [其他主要模型](./03-llm-models-research/08-other-major-models.md) | Kimi K2.5、GLM-5、豆包 2.0、Grok 4.2、MiniMax M2.5 等 |
 | 9 | [全面模型对比表格](./03-llm-models-research/09-model-comparison.md) | 多维度横向对比：性能、成本、延迟、上下文、合规 |
 | 10 | [模型选型指南](./03-llm-models-research/10-model-selection-guide.md) | 场景化决策树、Java 集成策略与成本控制 |
 | 11 | [微调候选模型](./03-llm-models-research/11-fine-tuning-candidates.md) | 微调方法对比、候选模型推荐、工具链指南 |

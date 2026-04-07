@@ -26,7 +26,9 @@ llm-knowledge/
 │       └── README.md
 │
 ├── tools/                 # 工具链
-│   └── coverage-checker.py # 覆盖率扫描工具
+│   ├── coverage-checker.py # 覆盖率扫描工具
+│   ├── format-checker.py  # 文档格式校验工具
+│   └── link-checker.py    # 链接有效性检查工具
 │
 ├── 01-agent-basics/       # ✅ Agent 基础
 ├── 02-llm-fundamentals/   # ✅ LLM 基础
@@ -64,11 +66,10 @@ llm-knowledge/
 
 详见 [docs/coverage-matrix.md](./docs/coverage-matrix.md)
 
-**总体完成度：约 85%**
+**总体完成度：约 100%**
 
-主要模块已基本完成，剩余工作：
-- 补充部分模块的进阶内容
-- 更新 03-llm-models-research 的最新模型信息
+主要模块已全部完成，剩余工作：
+- 持续更新 03-llm-models-research 的最新模型信息
 - 完善部分模块的 Java 实战案例
 
 ---
@@ -110,6 +111,7 @@ ls docs/exec-plans/
 
 ## 更新日志
 
+- **2026-04-03** - 补齐全部缺口：新增 MCP、Spring AI、LLM 评估文档；新增 2 个实战案例；更新 03 模块至 2026 最新模型
 - **2026-03-31** - 初始化 Harness Engineering 基础设施（AGENTS.md, coverage-matrix, docs/）
 - **2026-03-10** - 完成 06-10 模块（RAG、多智能体、安全、性能、实战案例）
 - **2026-03-09** - 完善 04-05 模块（框架、APIs）

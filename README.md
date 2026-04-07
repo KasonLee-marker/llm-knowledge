@@ -44,7 +44,9 @@ llm-knowledge/
 │   └── exec-plans/              # 执行计划（待完成任务描述）
 │
 ├── tools/                       # 辅助工具
-│   └── coverage-checker.py      # 覆盖率扫描脚本
+│   ├── coverage-checker.py      # 覆盖率扫描脚本
+│   ├── format-checker.py        # 文档格式校验脚本
+│   └── link-checker.py          # 链接有效性检查脚本
 │
 └── modules/                     # 历史草稿目录（非主导航）
     └── archive/                 # 归档的旧版文档
@@ -81,7 +83,7 @@ llm-knowledge/
 |------|------|--------|
 | 01 Agent 基础 | ✅ | 100% |
 | 02 LLM 基础 | ✅ | 100% |
-| 03 LLM 模型研究 | ⚠️ 持续更新 | 85% |
+| 03 LLM 模型研究 | ✅ | 100% |
 | 04 Agent 框架 | ✅ | 100% |
 | 05 LLM APIs 与供应商 | ✅ | 100% |
 | 06 RAG / 知识检索 | ✅ | 100% |
@@ -106,6 +108,7 @@ llm-knowledge/
 | 4 | [Agent 工具（Tools / Function Calling）](./01-agent-basics/04-agent-tools.md) | 工具定义、类型与 Java 接口设计 |
 | 5 | [Agent 记忆（Memory）](./01-agent-basics/05-agent-memory.md) | 短期/长期/情节/语义记忆与 RAG |
 | 6 | [意图识别（Intent Recognition）](./01-agent-basics/06-intent-recognition.md) | 意图识别技术演进、槽位填充与 Java 实现 |
+| 7 | [MCP 协议（Model Context Protocol）](./01-agent-basics/07-model-context-protocol.md) | MCP 协议规范、架构设计与 Java 集成 |
 
 ---
 
@@ -127,18 +130,18 @@ llm-knowledge/
 ## 03 - LLM 模型研究
 
 > 模块入口：[03-llm-models-research.md](./03-llm-models-research.md)
-> 持续更新，价格单位为 ¥/百万 token，详细更新状态见 [docs/coverage-matrix.md](./docs/coverage-matrix.md)
+> 持续更新（已更新至 2026 年），价格单位为 ¥/百万 token，详细更新状态见 [docs/coverage-matrix.md](./docs/coverage-matrix.md)
 
 | # | 文档 | 简介 |
 |---|------|------|
-| 1 | [LLM 市场全景概览](./03-llm-models-research/01-llm-landscape-overview.md) | 2025年全局模型分类、市场格局、¥/百万定价速查 |
-| 2 | [OpenAI GPT 系列](./03-llm-models-research/02-openai-gpt-series.md) | GPT-4.1/mini/nano、o3、o4-mini、o1 详细对比 |
-| 3 | [Anthropic Claude 系列](./03-llm-models-research/03-anthropic-claude.md) | Claude 3.7 Extended Thinking、3.5 系列 |
-| 4 | [Google Gemini 系列](./03-llm-models-research/04-google-gemini.md) | Gemini 2.5 Pro/Flash、Gemma 3（MIT）|
-| 5 | [Meta LLaMA 系列](./03-llm-models-research/05-meta-llama.md) | LLaMA 4 Scout（10M上下文）/ Maverick 与 3.x |
-| 6 | [阿里通义千问（Qwen）](./03-llm-models-research/06-alibaba-qwen.md) | Qwen3 双模式 MoE、QwQ-32B 推理开源 |
-| 7 | [DeepSeek 系列](./03-llm-models-research/07-deepseek.md) | V3-0324 更新、R1 蒸馏、精确成本定价 |
-| 8 | [其他主要模型](./03-llm-models-research/08-other-major-models.md) | **Kimi k2**、**Doubao**、**GLM-Z1**、Grok-3、Hunyuan-T1、Mistral Small 3.1、ERNIE 4.5 |
+| 1 | [LLM 市场全景概览](./03-llm-models-research/01-llm-landscape-overview.md) | 2026年全局模型分类、市场格局、¥/百万定价速查 |
+| 2 | [OpenAI GPT 系列](./03-llm-models-research/02-openai-gpt-series.md) | GPT-5.4/5.3 Instant、o4-mini 等 2026 最新对比 |
+| 3 | [Anthropic Claude 系列](./03-llm-models-research/03-anthropic-claude.md) | Claude Opus 4.6、Sonnet 4.6/4.5 系列 |
+| 4 | [Google Gemini 系列](./03-llm-models-research/04-google-gemini.md) | Gemini 3.1 Pro/Flash-Lite、Gemma 开源模型 |
+| 5 | [Meta LLaMA 系列](./03-llm-models-research/05-meta-llama.md) | LLaMA 4 Scout/Maverick 系列 |
+| 6 | [阿里通义千问（Qwen）](./03-llm-models-research/06-alibaba-qwen.md) | Qwen3.5 系列、双模式 MoE |
+| 7 | [DeepSeek 系列](./03-llm-models-research/07-deepseek.md) | DeepSeek V4/V3.2、R1-0528 精确成本定价 |
+| 8 | [其他主要模型](./03-llm-models-research/08-other-major-models.md) | Kimi K2.5、GLM-5、豆包 2.0、Grok 4.2、MiniMax M2.5 等 |
 | 9 | [全面模型对比表格](./03-llm-models-research/09-model-comparison.md) | **¥/百万token 完整定价表**，30+ 模型横向对比 |
 | 10 | [模型选型指南](./03-llm-models-research/10-model-selection-guide.md) | 场景化决策树、Java 集成策略与成本控制 |
 | 11 | [微调候选模型](./03-llm-models-research/11-fine-tuning-candidates.md) | 微调方法对比、候选模型推荐、工具链指南 |
@@ -158,6 +161,7 @@ llm-knowledge/
 | 4 | [LlamaIndex](./04-agent-frameworks/04-llamaindex.md) | RAG 专项框架 |
 | 5 | [自定义 Agent 开发](./04-agent-frameworks/05-custom-agent-development.md) | 不依赖框架的 Agent 工程实践 |
 | 6 | [框架对比 2026](./04-agent-frameworks/06-frameworks-comparison-2026.md) | 2026年最新框架趋势与选型指南 |
+| 7 | [Spring AI](./04-agent-frameworks/07-spring-ai.md) | Spring 官方 AI 框架完整指南 |
 
 ---
 
@@ -237,6 +241,7 @@ llm-knowledge/
 | 4 | [成本优化](./09-performance-monitoring/04-cost-optimization.md) | 模型路由、Token 优化、批量处理 |
 | 5 | [可观测性](./09-performance-monitoring/05-observability.md) | Logging、Tracing、Metrics、工具推荐 |
 | 6 | [Java 实战](./09-performance-monitoring/06-java-performance-practice.md) | Micrometer + Prometheus + Grafana |
+| 7 | [LLM 评估体系](./09-performance-monitoring/07-llm-evaluation.md) | LLM-as-Judge、RAGAS、DeepEval 评估方法 |
 
 ---
 
@@ -251,6 +256,8 @@ llm-knowledge/
 | 3 | [文档问答系统](./10-practical-cases/03-doc-qa-system.md) | 企业知识库问答系统 |
 | 4 | [SQL 生成助手](./10-practical-cases/04-sql-assistant.md) | Text2SQL 实现与验证 |
 | 5 | [数据分析助手](./10-practical-cases/05-data-analysis-assistant.md) | 数据可视化分析助手 |
+| 6 | [AI 自动化测试生成](./10-practical-cases/06-automated-testing.md) | LLM 驱动的单元测试与集成测试自动生成 |
+| 7 | [智能运维 AIOps](./10-practical-cases/07-intelligent-ops.md) | 日志分析、告警摘要与根因分析 |
 
 ---
 
@@ -258,6 +265,7 @@ llm-knowledge/
 
 | 日期 | 更新内容 |
 |------|---------|
+| 2026-04-03 | ✅ 新增 MCP 协议、Spring AI、LLM 评估文档；新增 AI 自动化测试、智能运维 AIOps 实战案例；更新 03 模块至 2026 最新模型 |
 | 2026-03-10 | ✅ 新增 06-10 模块（RAG、多智能体、安全、性能优化、实战案例，35+ 篇文档）|
 | 2026-03-09 | ✅ 完善 04 Agent 框架、05 LLM APIs 模块 |
 | 2026-03-09 | ✅ 初始化 01-03 模块 |

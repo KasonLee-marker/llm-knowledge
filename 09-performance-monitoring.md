@@ -174,6 +174,7 @@ graph TD
     C --> E
     D --> E
     E --> F[Java实战]
+    E --> G[LLM评估体系]
     
     style A fill:#fff3e0
     style B fill:#e3f2fd
@@ -181,6 +182,7 @@ graph TD
     style D fill:#e3f2fd
     style E fill:#f3e5f5
     style F fill:#ffe0e0
+    style G fill:#ffe0e0
 ```
 
 ## 与其他模块的关系

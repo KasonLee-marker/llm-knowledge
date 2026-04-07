@@ -27,6 +27,8 @@ graph TB
             DQ[03-文档问答系统]
             SA[04-SQL生成助手]
             DA[05-数据分析助手]
+            AT[06-AI自动化测试]
+            IO[07-智能运维AIOps]
         end
         
         subgraph "技术基础层"
@@ -56,6 +58,11 @@ graph TB
     SA --> TOOL
     DA --> LLM
     DA --> TOOL
+    AT --> LLM
+    AT --> TOOL
+    IO --> LLM
+    IO --> RAG
+    IO --> TOOL
     
     LLM --> SB
     RAG --> VDB
@@ -72,6 +79,8 @@ graph TB
     style DQ fill:#e8f5e9
     style SA fill:#fff3e0
     style DA fill:#fce4ec
+    style AT fill:#e0f7fa
+    style IO fill:#f1f8e9
     style LLM fill:#ffebee
     style RAG fill:#ffebee
     style MEM fill:#ffebee
@@ -80,54 +89,15 @@ graph TB
 
 ## 案例技术栈对比
 
-```mermaid
-graph LR
-    subgraph "技术栈矩阵"
-        direction TB
-        
-        Tech[技术组件] --> LLM[LLM API]
-        Tech --> RAG[RAG检索]
-        Tech --> MEM[记忆管理]
-        Tech --> TOOL[工具调用]
-        Tech --> VIZ[数据可视化]
-        
-        LLM --> CA[✓ 代码生成]
-        LLM --> CS[✓ 智能客服]
-        LLM --> DQ[✓ 文档问答]
-        LLM --> SA[✓ SQL生成]
-        LLM --> DA[✓ 数据分析]
-        
-        RAG --> CA[✗]
-        RAG --> CS[✓]
-        RAG --> DQ[✓]
-        RAG --> SA[✗]
-        RAG --> DA[✗]
-        
-        MEM --> CA[✗]
-        MEM --> CS[✓]
-        MEM --> DQ[✗]
-        MEM --> SA[✗]
-        MEM --> DA[✗]
-        
-        TOOL --> CA[✓]
-        TOOL --> CS[✗]
-        TOOL --> DQ[✗]
-        TOOL --> SA[✓]
-        TOOL --> DA[✓]
-        
-        VIZ --> CA[✗]
-        VIZ --> CS[✗]
-        VIZ --> DQ[✗]
-        VIZ --> SA[✗]
-        VIZ --> DA[✓]
-    end
-    
-    style CA fill:#e3f2fd
-    style CS fill:#f3e5f5
-    style DQ fill:#e8f5e9
-    style SA fill:#fff3e0
-    style DA fill:#fce4ec
-```
+| 技术组件 | 01-代码生成 | 02-智能客服 | 03-文档问答 | 04-SQL生成 | 05-数据分析 | 06-自动化测试 | 07-智能运维 |
+|---------|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+| LLM API | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| RAG 检索 | ✗ | ✓ | ✓ | ✗ | ✗ | ✗ | ✓ |
+| 记忆管理 | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
+| 工具调用 | ✓ | ✗ | ✗ | ✓ | ✓ | ✓ | ✓ |
+| 数据可视化 | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ | ✓ |
+| 代码解析 | ✓ | ✗ | ✗ | ✗ | ✗ | ✓ | ✗ |
+| 时序分析 | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✓ |
 
 ## 各案例核心能力
 
@@ -156,6 +126,16 @@ graph LR
 - **技术亮点**: 数据分析 Agent、图表生成、Markdown 报告
 - **适用场景**: 业务分析、数据探索、自动化报告
 
+### 06 - AI 自动化测试生成
+- **核心能力**: 单元测试生成、集成测试生成、测试用例推理、覆盖率分析
+- **技术亮点**: 代码理解、Function Calling、测试框架集成
+- **适用场景**: 测试自动化、回归测试、CI/CD 流水线
+
+### 07 - 智能运维 AIOps
+- **核心能力**: 日志分析、告警摘要、根因分析、自动修复建议
+- **技术亮点**: RAG 知识库、时序分析、多 Agent 协作
+- **适用场景**: 运维自动化、故障排查、容量规划
+
 ## 学习路径建议
 
 ```mermaid
@@ -165,12 +145,17 @@ graph TD
     C --> D[02-智能客服机器人<br/>RAG+对话管理]
     B --> E[05-数据分析助手<br/>综合应用]
     D --> E
+    A --> F[06-AI自动化测试<br/>代码理解+生成]
+    E --> G[07-智能运维AIOps<br/>多技术综合]
+    F --> G
     
     style A fill:#e3f2fd
     style B fill:#fff3e0
     style C fill:#e8f5e9
     style D fill:#f3e5f5
     style E fill:#fce4ec
+    style F fill:#e0f7fa
+    style G fill:#f1f8e9
 ```
 
 ## 前置知识要求
