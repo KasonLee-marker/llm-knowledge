@@ -213,4 +213,4 @@ LLaMA 是最受欢迎的微调基础模型之一：
 
 > 📌 相关文档：[06-alibaba-qwen.md](./06-alibaba-qwen.md) | [08-other-major-models.md](./08-other-major-models.md) | [11-fine-tuning-candidates.md](./11-fine-tuning-candidates.md)
 
-> 📅 最后更新：2026年3月
+> 📅 最后更新：2026年5月

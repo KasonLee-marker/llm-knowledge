@@ -266,6 +266,6 @@ docker run --gpus all -p 8000:8000 \
 
 > 📌 相关文档：[07-deepseek.md](./07-deepseek.md) | [08-other-major-models.md](./08-other-major-models.md) | [09-model-comparison.md](./09-model-comparison.md)
 
-> 📅 最后更新：2026年3月
+> 📅 最后更新：2026年5月
 
 > ⚠️ **团队变动注意**：2026 年初 Qwen 团队部分核心成员离职（包括 Qwen3-Max 和 Qwen3.5 负责人林俊旸），但阿里云已声明将继续投入开源。

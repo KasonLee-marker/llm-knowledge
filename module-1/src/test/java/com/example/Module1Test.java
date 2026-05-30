@@ -1,5 +1,14 @@
 package com.example;
 
+import com.example.agent.AgentDecision;
+import com.example.agent.ReActAgent;
+import com.example.memory.Message;
+import com.example.memory.MessageRole;
+import com.example.memory.ShortTermMemory;
+import com.example.tool.CalculatorTool;
+import com.example.tool.ToolExecutor;
+import com.example.tool.WeatherTool;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -29,7 +38,7 @@ class Module1Test {
     @Test
     @DisplayName("WeatherTool - 查询已知城市天气")
     void testWeatherTool_knownCity() {
-        Module1.WeatherTool tool = new Module1.WeatherTool();
+        WeatherTool tool = new WeatherTool();
         Map<String, String> params = new HashMap<>();
         params.put("city", "北京");
 
@@ -43,7 +52,7 @@ class Module1Test {
     @Test
     @DisplayName("WeatherTool - 查询未知城市时返回默认值")
     void testWeatherTool_unknownCity() {
-        Module1.WeatherTool tool = new Module1.WeatherTool();
+        WeatherTool tool = new WeatherTool();
         Map<String, String> params = new HashMap<>();
         params.put("city", "小镇X");
 
@@ -56,7 +65,7 @@ class Module1Test {
     @Test
     @DisplayName("WeatherTool - 不传城市参数时使用默认值")
     void testWeatherTool_defaultCity() {
-        Module1.WeatherTool tool = new Module1.WeatherTool();
+        WeatherTool tool = new WeatherTool();
         Map<String, String> params = new HashMap<>(); // 不传 city 参数
 
         String result = tool.execute(params);
@@ -68,7 +77,7 @@ class Module1Test {
     @Test
     @DisplayName("WeatherTool - 工具名称和描述正确")
     void testWeatherTool_metadata() {
-        Module1.WeatherTool tool = new Module1.WeatherTool();
+        WeatherTool tool = new WeatherTool();
 
         assertEquals("get_weather", tool.getName());
         assertNotNull(tool.getDescription());
@@ -82,7 +91,7 @@ class Module1Test {
     @Test
     @DisplayName("CalculatorTool - 加法运算")
     void testCalculatorTool_addition() {
-        Module1.CalculatorTool tool = new Module1.CalculatorTool();
+        CalculatorTool tool = new CalculatorTool();
         Map<String, String> params = new HashMap<>();
         params.put("expression", "3+5");
 
@@ -94,7 +103,7 @@ class Module1Test {
     @Test
     @DisplayName("CalculatorTool - 减法运算")
     void testCalculatorTool_subtraction() {
-        Module1.CalculatorTool tool = new Module1.CalculatorTool();
+        CalculatorTool tool = new CalculatorTool();
         Map<String, String> params = new HashMap<>();
         params.put("expression", "10-3");
 
@@ -106,7 +115,7 @@ class Module1Test {
     @Test
     @DisplayName("CalculatorTool - 乘法运算")
     void testCalculatorTool_multiplication() {
-        Module1.CalculatorTool tool = new Module1.CalculatorTool();
+        CalculatorTool tool = new CalculatorTool();
         Map<String, String> params = new HashMap<>();
         params.put("expression", "6*7");
 
@@ -118,7 +127,7 @@ class Module1Test {
     @Test
     @DisplayName("CalculatorTool - 除法运算")
     void testCalculatorTool_division() {
-        Module1.CalculatorTool tool = new Module1.CalculatorTool();
+        CalculatorTool tool = new CalculatorTool();
         Map<String, String> params = new HashMap<>();
         params.put("expression", "15/3");
 
@@ -130,7 +139,7 @@ class Module1Test {
     @Test
     @DisplayName("CalculatorTool - 除数为零时返回错误信息")
     void testCalculatorTool_divisionByZero() {
-        Module1.CalculatorTool tool = new Module1.CalculatorTool();
+        CalculatorTool tool = new CalculatorTool();
         Map<String, String> params = new HashMap<>();
         params.put("expression", "10/0");
 
@@ -143,7 +152,7 @@ class Module1Test {
     @Test
     @DisplayName("CalculatorTool - 工具名称和描述正确")
     void testCalculatorTool_metadata() {
-        Module1.CalculatorTool tool = new Module1.CalculatorTool();
+        CalculatorTool tool = new CalculatorTool();
 
         assertEquals("calculate", tool.getName());
         assertNotNull(tool.getDescription());
@@ -154,13 +163,13 @@ class Module1Test {
     // ToolExecutor 测试
     // ======================================================================
 
-    private Module1.ToolExecutor toolExecutor;
+    private ToolExecutor toolExecutor;
 
     @BeforeEach
     void setUp() {
-        toolExecutor = new Module1.ToolExecutor();
-        toolExecutor.registerTool(new Module1.WeatherTool());
-        toolExecutor.registerTool(new Module1.CalculatorTool());
+        toolExecutor = new ToolExecutor();
+        toolExecutor.registerTool(new WeatherTool());
+        toolExecutor.registerTool(new CalculatorTool());
     }
 
     @Test
@@ -213,24 +222,24 @@ class Module1Test {
     @Test
     @DisplayName("ShortTermMemory - 添加消息并正确读取")
     void testShortTermMemory_addAndRetrieve() {
-        Module1.ShortTermMemory memory = new Module1.ShortTermMemory(10);
-        memory.add(new Module1.Message(Module1.MessageRole.USER, "你好"));
-        memory.add(new Module1.Message(Module1.MessageRole.ASSISTANT, "你好！有什么可以帮助您？"));
+        ShortTermMemory memory = new ShortTermMemory(10);
+        memory.add(new Message(MessageRole.USER, "你好"));
+        memory.add(new Message(MessageRole.ASSISTANT, "你好！有什么可以帮助您？"));
 
-        List<Module1.Message> messages = memory.getMessages();
+        List<Message> messages = memory.getMessages();
 
         assertEquals(2, messages.size());
-        assertEquals(Module1.MessageRole.USER, messages.get(0).getRole());
+        assertEquals(MessageRole.USER, messages.get(0).getRole());
         assertEquals("你好", messages.get(0).getContent());
     }
 
     @Test
     @DisplayName("ShortTermMemory - 超出限制时自动淘汰旧消息")
     void testShortTermMemory_evictionWhenFull() {
-        Module1.ShortTermMemory memory = new Module1.ShortTermMemory(3);
+        ShortTermMemory memory = new ShortTermMemory(3);
         // 添加 5 条用户消息，超出限制
         for (int i = 1; i <= 5; i++) {
-            memory.add(new Module1.Message(Module1.MessageRole.USER, "消息 " + i));
+            memory.add(new Message(MessageRole.USER, "消息 " + i));
         }
 
         // 消息数量应精确等于 maxMessages
@@ -240,28 +249,28 @@ class Module1Test {
     @Test
     @DisplayName("ShortTermMemory - clear 保留系统消息")
     void testShortTermMemory_clearKeepsSystemMessages() {
-        Module1.ShortTermMemory memory = new Module1.ShortTermMemory(10);
-        memory.add(new Module1.Message(Module1.MessageRole.SYSTEM, "系统提示"));
-        memory.add(new Module1.Message(Module1.MessageRole.USER, "用户消息"));
-        memory.add(new Module1.Message(Module1.MessageRole.ASSISTANT, "助手回复"));
+        ShortTermMemory memory = new ShortTermMemory(10);
+        memory.add(new Message(MessageRole.SYSTEM, "系统提示"));
+        memory.add(new Message(MessageRole.USER, "用户消息"));
+        memory.add(new Message(MessageRole.ASSISTANT, "助手回复"));
 
         memory.clear();
 
-        List<Module1.Message> remaining = memory.getMessages();
+        List<Message> remaining = memory.getMessages();
         assertEquals(1, remaining.size(), "清除后只应保留系统消息");
-        assertEquals(Module1.MessageRole.SYSTEM, remaining.get(0).getRole());
+        assertEquals(MessageRole.SYSTEM, remaining.get(0).getRole());
     }
 
     @Test
     @DisplayName("ShortTermMemory - 消息列表不可修改（防御性拷贝）")
     void testShortTermMemory_immutableView() {
-        Module1.ShortTermMemory memory = new Module1.ShortTermMemory(10);
-        memory.add(new Module1.Message(Module1.MessageRole.USER, "test"));
+        ShortTermMemory memory = new ShortTermMemory(10);
+        memory.add(new Message(MessageRole.USER, "test"));
 
-        List<Module1.Message> messages = memory.getMessages();
+        List<Message> messages = memory.getMessages();
 
         assertThrows(UnsupportedOperationException.class, () ->
-                messages.add(new Module1.Message(Module1.MessageRole.USER, "hack")),
+                messages.add(new Message(MessageRole.USER, "hack")),
                 "getMessages() 应返回不可修改的列表");
     }
 
@@ -272,7 +281,7 @@ class Module1Test {
     @Test
     @DisplayName("ReActAgent - 天气查询流程完成")
     void testReActAgent_weatherQuery() {
-        Module1.ReActAgent agent = new Module1.ReActAgent(toolExecutor);
+        ReActAgent agent = new ReActAgent(toolExecutor);
 
         String result = agent.run("帮我查询北京今天的天气");
 
@@ -283,7 +292,7 @@ class Module1Test {
     @Test
     @DisplayName("ReActAgent - 数学计算流程完成")
     void testReActAgent_calculation() {
-        Module1.ReActAgent agent = new Module1.ReActAgent(toolExecutor);
+        ReActAgent agent = new ReActAgent(toolExecutor);
 
         String result = agent.run("计算 6*7");
 
@@ -294,7 +303,7 @@ class Module1Test {
     @Test
     @DisplayName("ReActAgent - 普通问答直接返回答案")
     void testReActAgent_generalQuestion() {
-        Module1.ReActAgent agent = new Module1.ReActAgent(toolExecutor);
+        ReActAgent agent = new ReActAgent(toolExecutor);
 
         String result = agent.run("你好，你能做什么？");
 
@@ -305,7 +314,7 @@ class Module1Test {
     @Test
     @DisplayName("ReActAgent - 执行日志非空")
     void testReActAgent_executionLogNotEmpty() {
-        Module1.ReActAgent agent = new Module1.ReActAgent(toolExecutor);
+        ReActAgent agent = new ReActAgent(toolExecutor);
         agent.run("查询上海天气");
 
         List<String> log = agent.getExecutionLog();
@@ -317,14 +326,14 @@ class Module1Test {
     @Test
     @DisplayName("ReActAgent - 运行后记忆包含用户消息")
     void testReActAgent_memoryContainsUserMessage() {
-        Module1.ReActAgent agent = new Module1.ReActAgent(toolExecutor);
+        ReActAgent agent = new ReActAgent(toolExecutor);
         String userInput = "帮我查询广州的天气";
 
         agent.run(userInput);
 
-        List<Module1.Message> messages = agent.getMemory().getMessages();
+        List<Message> messages = agent.getMemory().getMessages();
         boolean hasUserMessage = messages.stream()
-                .anyMatch(m -> m.getRole() == Module1.MessageRole.USER &&
+                .anyMatch(m -> m.getRole() == MessageRole.USER &&
                                m.getContent().equals(userInput));
         assertTrue(hasUserMessage, "记忆中应包含用户输入消息");
     }
@@ -336,7 +345,7 @@ class Module1Test {
     @Test
     @DisplayName("AgentDecision - finish 方法创建完成决策")
     void testAgentDecision_finish() {
-        Module1.AgentDecision decision = Module1.AgentDecision.finish("推理完成", "最终答案");
+        AgentDecision decision = AgentDecision.finish("推理完成", "最终答案");
 
         assertTrue(decision.isFinished);
         assertEquals("最终答案", decision.finalAnswer);
@@ -348,7 +357,7 @@ class Module1Test {
     void testAgentDecision_callTool() {
         Map<String, String> params = new HashMap<>();
         params.put("city", "北京");
-        Module1.AgentDecision decision = Module1.AgentDecision.callTool("需要查询天气", "get_weather", params);
+        AgentDecision decision = AgentDecision.callTool("需要查询天气", "get_weather", params);
 
         assertFalse(decision.isFinished);
         assertEquals("get_weather", decision.toolName);
@@ -363,7 +372,7 @@ class Module1Test {
     @Test
     @DisplayName("Message - toString 格式正确")
     void testMessage_toString() {
-        Module1.Message message = new Module1.Message(Module1.MessageRole.USER, "hello");
+        Message message = new Message(MessageRole.USER, "hello");
 
         String str = message.toString();
 
