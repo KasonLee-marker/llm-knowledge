@@ -13,7 +13,7 @@ from datetime import datetime
 MODULES = {
     "01-agent-basics": {
         "name": "Agent 基础",
-        "expected": 6,
+        "expected": 7,
         "priority": "P0"
     },
     "02-llm-fundamentals": {
@@ -28,7 +28,7 @@ MODULES = {
     },
     "04-agent-frameworks": {
         "name": "Agent 框架",
-        "expected": 6,
+        "expected": 7,
         "priority": "P0"
     },
     "05-llm-apis-providers": {
@@ -53,12 +53,12 @@ MODULES = {
     },
     "09-performance-monitoring": {
         "name": "性能优化",
-        "expected": 6,
+        "expected": 7,
         "priority": "P0"
     },
     "10-practical-cases": {
         "name": "实战案例",
-        "expected": 5,
+        "expected": 7,
         "priority": "P0"
     }
 }

@@ -1,7 +1,7 @@
 # 知识点覆盖矩阵
 
 > 本文件由 coverage-checker.py 自动生成和维护
-> 最后更新：2026-04-03
+> 最后更新：2026-05-30
 
 ---
 
@@ -53,13 +53,13 @@
 
 | 知识点 | 文件 | 状态 | 备注 |
 |--------|------|------|------|
-| 市场全景 | 01-llm-landscape-overview.md | ✅ | 完整 |
+|| 市场全景 | 01-llm-landscape-overview.md | ✅ | 已更新至 2026-05（GPT-5.5、Claude 4.8、Gemini 3.5 Flash 等）|
 | OpenAI GPT | 02-openai-gpt-series.md | ✅ | 已更新至 2026（GPT-5.4, o4-mini 等）|
 | Anthropic Claude | 03-anthropic-claude.md | ✅ | 已更新至 2026（Claude 4.5/4.6 等）|
 | Google Gemini | 04-google-gemini.md | ✅ | 已更新至 2026（Gemini 3 系列）|
 | Meta LLaMA | 05-meta-llama.md | ✅ | 已更新至 2026（LLaMA 4 系列）|
 | 阿里 Qwen | 06-alibaba-qwen.md | ✅ | 已更新至 2026（Qwen 3.5 系列）|
-| DeepSeek | 07-deepseek.md | ✅ | 已更新至 2026（V3.2, R1-0528）|
+|| DeepSeek | 07-deepseek.md | ✅ | 已更新至 2026-05（V4-Pro, 永久降价75%, $45B估值）|
 | 其他模型 | 08-other-major-models.md | ✅ | 已更新至 2026（Kimi, Grok-3 等）|
 | 模型对比 | 09-model-comparison.md | ✅ | 已更新定价和 Benchmark（2026-03）|
 | 选型指南 | 10-model-selection-guide.md | ✅ | 完整 |
@@ -168,6 +168,7 @@
 
 | 日期 | 操作 | 内容 |
 |------|------|------|
+| 2026-05-30 | 更新 | 全量更新 03 模块至 2026-05 最新 (GPT-5.5、Claude 4.8、DeepSeek V4-Pro、Gemini 3.5 Flash、Mythos) |
 | 2026-04-03 | 更新 | 补齐全部缺口：新增 MCP、Spring AI、LLM 评估文档；新增 2 个实战案例；更新 03 模块状态 |
 | 2026-03-31 | 创建 | 初始化 Harness Engineering 覆盖矩阵 |
 | 2026-03-10 | 更新 | 完成 06-10 模块 |

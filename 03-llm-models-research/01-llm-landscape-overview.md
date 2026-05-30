@@ -19,7 +19,7 @@
 
 | 规模 | 参数量 | 代表模型 | 适用场景 |
 |------|--------|---------|---------|
-| 超大模型 | > 100B | GPT-5.4、Claude Opus 4.6、Gemini 3.1 Pro | 最高质量推理，高成本 |
+| 超大模型 | > 100B | GPT-5.4、Claude Opus 4.8、Gemini 3.1 Pro | 最高质量推理，高成本 |
 | 大模型 | 30B–100B | LLaMA 4、Qwen3.5、DeepSeek-V4 | 高质量，可自托管 |
 | 中型模型 | 7B–30B | Mistral 7B、LLaMA 3 8B、Qwen2.5 14B | 本地部署，低延迟 |
 | 小模型 | < 7B | Phi-4、Gemma 3 2B、LLaMA 3.2 1B | 边缘设备，超低延迟 |
@@ -28,14 +28,14 @@
 
 | 类别 | 代表模型 | 核心能力 |
 |------|---------|---------|
-| 通用对话 | GPT-5.4、Claude Sonnet 4.6、Gemini 3.1 | 指令跟随、创意写作、分析 |
-| 推理专项 | o3、o4、DeepSeek-R1、GLM-Z1 | 数学、逻辑、复杂推理 |
-| 代码专项 | GPT-5.3-Codex、Claude Opus 4.6、Gemini 3.1 Pro | 代码生成、调试、审查 |
+| 通用对话 | GPT-5.5 Instant、GPT-5.4、Claude Sonnet 4.6、Gemini 3.1 | 指令跟随、创意写作、分析 |
+| 推理专项 | o3、o4、DeepSeek-R1、DeepSeek V4-Pro、GLM-Z1 | 数学、逻辑、复杂推理 |
+| 代码专项 | GPT-5.3-Codex、Claude Opus 4.8、Gemini 3.1 Pro | 代码生成、调试、审查 |
 | 多模态 | GPT-5.4、Gemini 3.1、Claude 4.6 | 图像/视频/音频理解、Computer Use |
 | 长上下文 | Gemini 3.1 (1M)、Claude 4.6 (1M)、LLaMA 4 Scout (10M) | 超长文档分析 |
-| 中文优化 | Qwen3.5、DeepSeek-V4、Kimi K2.5、GLM-5 | 中文理解与生成 |
+| 中文优化 | Qwen3.5、DeepSeek V4-Pro、Kimi K2.5、GLM-5 | 中文理解与生成 |
 
-## 3. 主流模型全景一览（2026年3月最新）
+## 3. 主流模型全景一览（2026年5月最新）
 
 > 💡 **价格说明**：以下价格均为**每百万 token（¥/百万 tok 或 $/百万 tok）**，人民币与美元汇率约 7.3:1。价格随市场竞争频繁调整，以各厂商官方页面为准。
 
@@ -43,12 +43,16 @@
 
 | 模型 | 厂商 | 发布时间 | 上下文 | 多模态 | 输入价格(¥/百万) | 输出价格(¥/百万) | 关键特性 |
 |------|------|---------|--------|--------|----------------|----------------|---------|
+| **GPT-5.5 Instant** | OpenAI | 2026-05 | 400K | ❌ | ¥3.6 | ¥14.6 | 新一代ChatGPT默认模型，上下文记忆，Gmail集成 |
+| **GPT-5.5-Cyber** | OpenAI | 2026-05 | 400K | ❌ | 未公开 | 未公开 | 网络安全专项，漏洞检测与防御分析 |
 | **GPT-5.4** | OpenAI | 2026-03 | 1M | ✅ (Computer Use) | ¥18 (Pro版¥216) | ¥108 (Pro版¥1296) | 原生Computer Use，OSWorld 75.0% |
 | **GPT-5.3 Instant** | OpenAI | 2026-03 | 400K | ❌ | 未公开 | 未公开 | 幻觉率降低26.8%，快速响应 |
 | **GPT-5.3-Codex** | OpenAI | 2026-02 | - | ❌ | - | - | 专业编程模型，编码能力领先 |
-| **Claude Opus 4.6** | Anthropic | 2026-02 | 1M | ✅ | ¥36 | ¥180 | 最强编程能力，SWE-bench领先 |
+| **Claude Opus 4.8** | Anthropic | 2026-05 | 1M | ✅ | ¥36 | ¥180 | 替代Opus 4.6，$5/$25 per million，推理升级 |
 | **Claude Sonnet 4.6** | Anthropic | 2026-02 | 1M (Beta) | ✅ | ¥36 | ¥180 | Agent规划增强，编码提升 |
 | **Claude Haiku 4.5** | Anthropic | 2026-01 | - | ✅ | 低价 | 低价 | 轻量级快速响应 |
+| **Anthropic Mythos** | Anthropic | 2026 (预览) | - | ✅ | 未公开 | 未公开 | 前沿模型预览，Anthropic估值$965B |
+| **Gemini 3.5 Flash** | Google | 2026-05 | 1M | ✅ | ¥3.6 | ¥21 | Agent优化，超越3.1 Pro，速度4x提升 |
 | **Gemini 3.1 Pro** | Google | 2026-02 | 1M | ✅ | ¥14-28 | ¥28-126 | ARC-AGI-2 77.1%，推理最强 |
 | **Gemini 3.1 Flash-Lite** | Google | 2026-03 | 1M | ✅ | ¥1.8 | ¥10.5 | 性价比最高，可调思考层级 |
 | **Gemini 3 Flash** | Google | 2026-02 | 1M | ✅ | ¥3.6 | ¥21 | 平衡速度与性能 |
@@ -58,7 +62,7 @@
 
 | 模型 | 厂商 | 发布时间 | 上下文 | 多模态 | 输入(¥/百万) | 输出(¥/百万) | 关键特性 |
 |------|------|---------|--------|--------|------------|------------|---------|
-| **DeepSeek V4** | DeepSeek | 2026-03(预计) | 1M | ✅ | ~¥1 | ~¥2 | 原生多模态，编码专精 |
+| **DeepSeek V4-Pro** | DeepSeek | 2026-05 | 1M | ✅ | ¥0.025 | ¥6 | 永久75%降价，¥0.025-6/百万，估值$45B |
 | **DeepSeek V3.2** | DeepSeek | 2025-12 | 1M | ❌ | ¥0.28 | ¥1.1 | 当前最新可用版本 |
 | **Qwen3.5-397B-A17B** | 阿里 | 2026-02 | 256K | ✅ | 开源免费 | 开源免费 | MoE架构，Apache 2.0 |
 | **Qwen3.5-Plus** | 阿里 | 2026-02 | 1M | ✅ | ¥0.8-4 | ¥4.8-24 | 阶梯计价，长文本强 |
@@ -72,7 +76,7 @@
 
 | 模型 | 机构 | 参数量 | 上下文 | 许可证 | 关键特性 |
 |------|------|--------|--------|--------|---------|
-| **DeepSeek V4** | DeepSeek | - | 1M | 预计开源 | 原生多模态，编码专精 |
+| **DeepSeek V4-Pro** | DeepSeek | - | 1M | 开源 | 永久75%降价，估值$45B |
 | **DeepSeek V3.2** | DeepSeek | - | 1M | 开源 | 当前最新可用 |
 | **Qwen3.5-397B-A17B** | 阿里 | 397B MoE (17B激活) | 256K | Apache 2.0 | 性能对标Qwen3-Max |
 | **Qwen3.5-0.8B/2B/4B/9B** | 阿里 | 0.8B-9B | - | Apache 2.0 | 小尺寸开源系列 |
@@ -118,22 +122,33 @@
   ├─ 2026-02 GLM-5（智谱，Agentic Engineering最佳）
   ├─ 2026-02 MiniMax M2.5（OpenRouter霸榜）
   ├─ 2026-03 GPT-5.4 / 5.3 Instant（原生Computer Use）
-  └─ 2026-03 DeepSeek V4（预计发布，原生多模态）
+  ├─ 2026-03 DeepSeek V4（预计发布，原生多模态）
+  ├─ 2026-05 GPT-5.5-Cyber（OpenAI网络安全模型）
+  ├─ 2026-05 GPT-5.5 Instant（ChatGPT新默认，上下文记忆）
+  ├─ 2026-05 Claude Opus 4.8（Anthropic，替代Opus 4.6）
+  ├─ 2026-05 Gemini 3.5 Flash（Google I/O，Agent优化，4x加速）
+  ├─ 2026-05 DeepSeek V4-Pro（永久75%降价，估值$45B）
+  └─ 2026 Anthropic Mythos（前沿模型预览，估值$965B）
 ```
 
-> **最新动态（2026年3月）**：
+> **最新动态（2026年5月）**：
+> - **2026-05**：Anthropic 发布 Claude Opus 4.8，替代 Opus 4.6，定价 $5/$25 per million tokens
+> - **2026-05**：Google I/O 发布 Gemini 3.5 Flash，Agent 优化，性能超越 3.1 Pro，输出速度 4x 提升
+> - **2026-05**：OpenAI 发布 GPT-5.5 Instant，成为 ChatGPT 新一代默认模型，支持上下文记忆与 Gmail 集成
+> - **2026-05**：OpenAI 发布 GPT-5.5-Cyber，专注网络安全领域，面向漏洞检测与防御分析
+> - **2026-05**：DeepSeek V4-Pro 发布，永久 75% 降价至 ¥0.025-6/百万 token，公司估值达 $45B
+> - **2026**：Anthropic 公布 Mythos 前沿模型预览，公司估值达 $965B
 > - **2026-03**：OpenAI 发布 GPT-5.4，首个原生内置 Computer Use 能力的通用模型，OSWorld 测试 75.0% 超越人类
 > - **2026-03**：OpenAI 发布 GPT-5.3 Instant，幻觉率降低 26.8%，反"尴尬"语气优化
 > - **2026-03**：Google 发布 Gemini 3.1 Flash-Lite，性价比最高，输出速度比 Flash 快 45%
-> - **2026-03**：DeepSeek V4 预计发布，原生多模态架构，编码能力专精
 > - **2026-02**：Claude Opus 4.6 / Sonnet 4.6 发布，编程能力业界领先
 > - **2026-02**：Gemini 3.1 Pro 发布，ARC-AGI-2 测试 77.1%，推理能力最强
 > - **2026-02**：阿里 Qwen3.5 系列发布，397B MoE 开源，Apache 2.0 协议
 > - **2026-02**：智谱 GLM-5 发布，"Agentic Engineering 时代最好的模型"
 > - **2026-02**：xAI Grok 4.2 公测，500B 参数，每周自我迭代能力
 > - **2026-01**：月之暗面 Kimi K2.5 开源，万亿参数 MoE，训练成本仅 460 万美元
-> - **价格趋势**：OpenAI GPT-5.4 Pro 大幅涨价测试市场承受力；Gemini 3.1 Flash-Lite、DeepSeek 等持续压低价格
-> - **技术趋势**：Agentic 能力成为竞争焦点，Computer Use、工具使用、Agent 规划成为标配
+> - **价格趋势**：DeepSeek V4-Pro 永久 75% 降价引发价格战；OpenAI GPT-5.4 Pro 高价测试市场承受力；Gemini 3.5 Flash 以速度为卖点
+> - **技术趋势**：Agentic 能力成为竞争焦点，Computer Use、工具使用、Agent 规划成为标配；网络安全专项模型（GPT-5.5-Cyber）开辟垂直赛道
 
 ## 5. 选择模型的核心维度
 

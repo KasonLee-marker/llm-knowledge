@@ -265,6 +265,7 @@ llm-knowledge/
 
 | 日期 | 更新内容 |
 |------|---------|
+| 2026-05-30 | 🔄 更新 03 模块到 2026-05 最新：GPT-5.5 Instant/Cyber、Claude Opus 4.8、DeepSeek V4-Pro (永久降价75%)、Gemini 3.5 Flash、Anthropic Mythos |
 | 2026-04-03 | ✅ 新增 MCP 协议、Spring AI、LLM 评估文档；新增 AI 自动化测试、智能运维 AIOps 实战案例；更新 03 模块至 2026 最新模型 |
 | 2026-03-10 | ✅ 新增 06-10 模块（RAG、多智能体、安全、性能优化、实战案例，35+ 篇文档）|
 | 2026-03-09 | ✅ 完善 04 Agent 框架、05 LLM APIs 模块 |

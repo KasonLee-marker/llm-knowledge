@@ -23,6 +23,10 @@
 | 2026-02 | Claude Opus 4.6 | 1M 上下文，自适应思考 |
 | 2026-02 | Qwen3.5 发布 | 397B MoE，原生 Agent |
 | 2026-03 | GPT-5.4 发布 | 1M 上下文，Thinking 模式 |
+| 2026-05 | GPT-5.5 Instant / GPT-5.5-Cyber | ChatGPT新默认，网络安全专项 |
+| 2026-05 | Claude Opus 4.8 | 替代 Opus 4.6，推理升级 |
+| 2026-05 | Gemini 3.5 Flash | Agent优化，性能超越3.1 Pro |
+| 2026-05 | DeepSeek V4-Pro | 永久75%降价，估值$45B |
 
 **核心洞察**：推理能力的提升已从"更大模型"转向"更聪明的思考"，所有主流厂商都在推出推理专项模型。
 
@@ -36,6 +40,7 @@
 | GPT-5-nano（2025）| $0.05 | -95% |
 | DeepSeek-V3（2024-12）| $0.14 | 颠覆性低价 |
 | DeepSeek-V3.2（2025-12）| $0.28 | 略有上涨 |
+| DeepSeek V4-Pro（2026-05）| $0.025 input, $6 output | 永久75%降价 |
 | Seed 2.0（2026-02）| ~$0.055 | 行业最低 |
 | GLM-4-Flash（2025）| $0（免费）| — |
 
@@ -77,6 +82,7 @@
 | 2025-12 | DeepSeek-V3.2 升级，128K 上下文 |
 | 2026-02 | Qwen3.5 发布，397B MoE，1M 上下文 |
 | 2026-02 | Seed 2.0 发布，1.55 亿周活用户 |
+| 2026-05 | DeepSeek V4-Pro 永久75%降价，估值$45B |
 
 中国模型的崛起推动了全球 LLM 价格大幅下降（OpenAI、Anthropic 均跟随降价）。
 
@@ -143,7 +149,9 @@ DeepSeek-R1 蒸馏版证明：**7B 小模型蒸馏后可超越 Claude 3.5 数学
 | 模型 | Agent 能力 | 特点 |
 |------|-----------|------|
 | **GPT-5.3-Codex** | 计算机操作、代码执行 | OpenAI Agent 旗舰 |
-| **Claude 4.6** | Agent Teams、并行编码 | 企业级 Agent |
+| **GPT-5.5-Cyber** | 漏洞检测、安全防御 | 网络安全专项Agent |
+| **Claude Opus 4.8** | Agent Teams、并行编码 | 企业级Agent，$5/$25定价 |
+| **Gemini 3.5 Flash** | Agent优化、4x加速 | 超越3.1 Pro，实时响应 |
 | **Qwen3.5** | 原生多模态 Agent | 视觉感知、工具调用 |
 | **Kimi k2.5** | 100 子 Agent 并行 | 复杂任务分解 |
 | **Seed 2.0** | Agent 时代模型 | 1.55 亿用户规模 |
@@ -256,10 +264,11 @@ DeepSeek-R1 之后，中国模型正在积极进入国际市场：
 
 | 预期模型 | 发布时间 | 预期特性 |
 |---------|---------|---------|
-| GPT-5.5 / GPT-6 | 2026 下半年 | 更强的 Agent 能力 |
+| GPT-5.5 / GPT-6 | 2026 下半年 | 更强的 Agent 能力，GPT-5.5 Instant 已发布 |
 | Claude 5 系列 | 2026 下半年 | 1M+ 上下文，更强推理 |
+| Anthropic Mythos | 2026 预览 | 前沿模型，Anthropic估值$965B |
 | Gemini 4 | 2026 下半年 | 原生多模态 Agent |
-| DeepSeek-V4 / R2 | 2026 Q1-Q2 | 1.2T MoE，多模态 |
+| DeepSeek-V4 / R2 | 2026 Q1-Q2 | 1.2T MoE，多模态，V4-Pro已发布 |
 | Qwen4 系列 | 2026 下半年 | 更大规模，更强 Agent |
 | LLaMA 5 | 2026 下半年 | 下一代 MoE |
 
@@ -267,4 +276,4 @@ DeepSeek-R1 之后，中国模型正在积极进入国际市场：
 
 > 📌 相关文档：[01-llm-landscape-overview.md](./01-llm-landscape-overview.md) | [10-model-selection-guide.md](./10-model-selection-guide.md)
 
-> 📅 最后更新：2026年3月
+> 📅 最后更新：2026年5月
